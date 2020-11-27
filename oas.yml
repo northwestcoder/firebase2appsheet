@@ -1,0 +1,185 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Persons Design Pattern
+  description: Shows Persons collection RESTful design pattern. Used in API Sheet App.
+servers:
+  - url: 'https://amer-demo31-test.apigee.net/appsheet_firebase/v1'
+paths:
+  /persons:
+    get:
+      tags:
+        - Person
+      description: Return list of persons.
+      summary: Returns list of existing persons.
+      operationId: getPersons
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PersonsResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    post:
+      tags:
+        - Person
+      description: Create Person
+      summary: Create a new person.
+      operationId: createPerson
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Person'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PersonResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    put:
+      tags:
+        - Person
+      description: Update Person completely
+      summary: Update an existing person.
+      operationId: updatePerson
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Person'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PersonResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    
+  '/persons/{id}':
+    get:
+      tags:
+        - Person
+      description: Return person details.
+      summary: Return details for an existing person.
+      operationId: getPerson
+      parameters:
+        - $ref: '#/components/parameters/personIdPath'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PersonResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      tags:
+        - Person
+      description: Delete person.
+      summary: Delete an existing person.
+      operationId: deletePerson
+      parameters:
+        - $ref: '#/components/parameters/personIdPath'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PersonResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+security:
+  - ApiKeyAuth: []
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-APIKey
+    ClientCredentials:
+      type: oauth2
+      description: 'See https://developer.kurtkanaskie.net/docs/get-started'
+      flows:
+        clientCredentials:
+          tokenUrl: 'https://amer-demo31-test.apigee.net/oauth/v1/token'
+          scopes: {}
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  parameters:
+    personIdPath:
+      in: path
+      name: id
+      description: The person identifier.
+      required: true
+      schema:
+        type: string
+  schemas:
+    Person:
+      type: object
+      required:
+        - id
+        - Name
+      additionalProperties: false
+      properties:
+        id:
+          type: string
+        Name:
+          type: string
+    PersonsResponse:
+      type: object
+      properties:
+        persons:
+          type: array
+          items:
+            $ref: '#/components/schemas/Person'
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        userMessage:
+          type: string
+        systemMessage:
+          type: string
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          description: Used to pass error information in a response.
+          type: array
+          items:
+            $ref: '#/components/schemas/Error'
