@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
   version: 1.0.0
-  title: Persons Design Pattern
-  description: Shows Persons collection RESTful design pattern. Used in API Sheet App.
+  title: Appsheet Design Pattern
+  description: Shows various collections in a RESTful design pattern. Used in Appsheet App.
 servers:
   - url: 'https://firebase2appsheet-hb3so6eq3q-uc.a.run.app/'
 paths:
@@ -120,6 +120,120 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
+  /events:
+    get:
+      tags:
+        - Event
+      description: Return list of Events.
+      summary: Returns list of existing events.
+      operationId: getEvents
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    post:
+      tags:
+        - Event
+      description: Create Event
+      summary: Create a new event.
+      operationId: createEvent
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Event'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    put:
+      tags:
+        - Event
+      description: Update Event completely
+      summary: Update an existing event.
+      operationId: updateEvent
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Event'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    
+  '/events/{id}':
+    get:
+      tags:
+        - Event
+      description: Return event details.
+      summary: Return details for an existing event.
+      operationId: getEvent
+      parameters:
+        - $ref: '#/components/parameters/eventIdPath'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      tags:
+        - Event
+      description: Delete event.
+      summary: Delete an existing event.
+      operationId: deleteEvent
+      parameters:
+        - $ref: '#/components/parameters/eventIdPath'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
 security:
   - ApiKeyAuth: []
 components:
@@ -133,6 +247,13 @@ components:
       in: path
       name: id
       description: The person identifier.
+      required: true
+      schema:
+        type: string
+    eventIdPath:
+      in: path
+      name: id
+      description: The event identifier.
       required: true
       schema:
         type: string
@@ -172,6 +293,41 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Person'
+    Event:
+      type: object
+      required:
+        - id
+        - Name
+      additionalProperties: true
+      properties:
+        id:
+          type: string
+        Name:
+          type: string
+        type:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        duration:
+          type: integer
+        address:
+          type: string
+        latlong:
+          type: string
+        photo:
+          type: string
+        barcode:
+          type: string
+        notes:
+          type: string
+    EventResponse:
+      type: object
+      properties:
+        persons:
+          type: array
+          items:
+            $ref: '#/components/schemas/Event'            
     Error:
       type: object
       properties:

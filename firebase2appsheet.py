@@ -1,4 +1,3 @@
-# main entry point
 import os
 from flask import Flask, request, jsonify
 from firebase_admin import credentials, firestore, initialize_app
@@ -37,7 +36,7 @@ def createperson():
 		return f"An Error Occured: {e}"
 
 @app.route('/persons', methods=['GET'])
-def read():
+def readperson():
 
 	try:
 		all_persons = [doc.to_dict() for doc in persons.stream()]
@@ -49,7 +48,7 @@ def read():
 		return f"An Error Occured: {e}"
 
 @app.route('/persons/<id>', methods=['GET'])
-def readone(id):
+def readoneperson(id):
 
 	try:
 		todo = persons.document(id).get()
@@ -59,7 +58,7 @@ def readone(id):
 
 
 @app.route('/persons/<id>', methods=['POST', 'PUT'])
-def update(id):
+def updateperson(id):
 
 	try:
 		id = request.json['id']
@@ -70,10 +69,65 @@ def update(id):
 
 
 @app.route('/persons/<id>', methods=['DELETE'])
-def delete(id):
+def deleteperson(id):
 
 	try:
 		persons.document(id).delete()
+		return jsonify({"success": True}), 200
+	except Exception as e:
+		return f"An Error Occured: {e}"
+
+
+
+
+@app.route('/events', methods=['POST'])
+def createevent():
+
+	try:
+		id = request.json['id']
+		events.document(id).set(request.json)
+		return jsonify({"success": True}), 200
+	except Exception as e:
+		return f"An Error Occured: {e}"
+
+@app.route('/events', methods=['GET'])
+def readevent():
+
+	try:
+		all_events = [doc.to_dict() for doc in events.stream()]
+		jsonresult = jsonify({"events" : all_events}), 200
+#		appsheetresult["events"] = jsonresult
+		return jsonresult
+#		return jsonify("events" : all_events), 200
+	except Exception as e:
+		return f"An Error Occured: {e}"
+
+@app.route('/events/<id>', methods=['GET'])
+def readoneevent(id):
+
+	try:
+		todo = events.document(id).get()
+		return jsonify(todo.to_dict()), 200
+	except Exception as e:
+		return f"An Error Occured: {e}"
+
+
+@app.route('/events/<id>', methods=['POST', 'PUT'])
+def updateevent(id):
+
+	try:
+		id = request.json['id']
+		events.document(id).update(request.json)
+		return jsonify({"success": True}), 200
+	except Exception as e:
+		return f"An Error Occured: {e}"
+
+
+@app.route('/events/<id>', methods=['DELETE'])
+def deleteevent(id):
+
+	try:
+		events.document(id).delete()
 		return jsonify({"success": True}), 200
 	except Exception as e:
 		return f"An Error Occured: {e}"
