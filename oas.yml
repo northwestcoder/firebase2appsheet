@@ -6,6 +6,74 @@ info:
 servers:
   - url: 'https://firebase2appsheet-hb3so6eq3q-uc.a.run.app/'
 paths:
+  /settings:
+    get:
+      tags:
+        - Settings
+      description: Return list of settings.
+      summary: Returns list of existing settings.
+      operationId: getSettings
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SettingResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    put:
+      tags:
+        - Setting
+      description: Update Setting completely
+      summary: Update an existing setting.
+      operationId: updateSetting
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Setting'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SettingResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    
+  '/settings/{id}':
+    get:
+      tags:
+        - Setting
+      description: Return setting details.
+      summary: Return details for an existing setting.
+      operationId: getSetting
+      parameters:
+        - $ref: '#/components/parameters/settingIdPath'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SettingResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
   /persons:
     get:
       tags:
@@ -500,7 +568,29 @@ components:
       required: true
       schema:
         type: string
+    settingIdPath:
+      in: path
+      name: id
+      description: The person identifier.
+      required: true
+      schema:
+        type: string        
   schemas:
+    Setting:
+      type: object
+      required:
+        - value
+      additionalProperties: false
+      properties:
+        value:
+          type: string
+    SettingResponse:
+      type: object
+      properties:
+        Setting:
+          type: array
+          items:
+            $ref: '#/components/schemas/Setting'    
     Person:
       type: object
       required:
