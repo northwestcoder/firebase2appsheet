@@ -531,7 +531,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
-  /content:
+  /contents:
     get:
       tags:
         - Content
