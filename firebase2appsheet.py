@@ -19,7 +19,8 @@ things = db.collection('things')
 @app.route('/oaspec', methods=['GET'])
 def getoas():
 	try:
-	   return oaspec.oas_endpoint()
+		oas = open('oas.yml', 'r').read()	
+		return oas
 	except Exception as e:
 		return f"An Error Occured reading oas spec: {e}"
 

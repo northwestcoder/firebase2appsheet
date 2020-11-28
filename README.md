@@ -1,6 +1,6 @@
 # firebase2appsheet
 
-
+Note: This is not an official Google Product.
 
 
 high level
