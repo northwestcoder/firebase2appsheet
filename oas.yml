@@ -531,6 +531,120 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
+  /content:
+    get:
+      tags:
+        - Content
+      description: Return list of content.
+      summary: Returns list of existing content.
+      operationId: getContents
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContentResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    post:
+      tags:
+        - Content
+      description: Create Content
+      summary: Create a new content.
+      operationId: createContent
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Content'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContentResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    put:
+      tags:
+        - Content
+      description: Update Content completely
+      summary: Update an existing content.
+      operationId: updateContent
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Content'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContentResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    
+  '/content/{id}':
+    get:
+      tags:
+        - Content
+      description: Return content details.
+      summary: Return details for an existing content.
+      operationId: getContent
+      parameters:
+        - $ref: '#/components/parameters/contentIdPath'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContentResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      tags:
+        - Content
+      description: Delete content.
+      summary: Delete an existing content.
+      operationId: deleteContent
+      parameters:
+        - $ref: '#/components/parameters/contentIdPath'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContentResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
 security:
   - ApiKeyAuth: []
 components:
@@ -571,10 +685,17 @@ components:
     settingIdPath:
       in: path
       name: id
-      description: The person identifier.
+      description: The setting identifier.
       required: true
       schema:
-        type: string        
+        type: string
+    contentIdPath:
+      in: path
+      name: id
+      description: The content identifier.
+      required: true
+      schema:
+        type: string                 
   schemas:
     Setting:
       type: object
@@ -588,6 +709,24 @@ components:
         value:
           type: string
     SettingResponse:
+      type: object
+      properties:
+        Setting:
+          type: array
+          items:
+            $ref: '#/components/schemas/Setting'    
+    Content:
+      type: object
+      required:
+        - id
+        - content
+      additionalProperties: false
+      properties:
+        id:
+          type: string
+        content:
+          type: string
+    ContentResponse:
       type: object
       properties:
         Setting:
