@@ -4,7 +4,7 @@ info:
   title: Persons Design Pattern
   description: Shows Persons collection RESTful design pattern. Used in API Sheet App.
 servers:
-  - url: 'https://amer-demo31-test.apigee.net/appsheet_firebase/v1'
+  - url: 'https://firebase2appsheet-hb3so6eq3q-uc.a.run.app/'
 paths:
   /persons:
     get:
@@ -19,7 +19,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PersonsResponse'
+                $ref: '#/components/schemas/PersonResponse'
         '400':
           description: Error
           content:
@@ -128,17 +128,6 @@ components:
       type: apiKey
       in: header
       name: X-APIKey
-    ClientCredentials:
-      type: oauth2
-      description: 'See https://developer.kurtkanaskie.net/docs/get-started'
-      flows:
-        clientCredentials:
-          tokenUrl: 'https://amer-demo31-test.apigee.net/oauth/v1/token'
-          scopes: {}
-    BearerAuth:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
   parameters:
     personIdPath:
       in: path
@@ -153,13 +142,30 @@ components:
       required:
         - id
         - Name
-      additionalProperties: false
+      additionalProperties: true
       properties:
         id:
           type: string
         Name:
           type: string
-    PersonsResponse:
+        mobile:
+          type: string
+        birthdate:
+          type: string
+          format: date
+        tenure:
+          type: integer
+        address:
+          type: string
+        email:
+          type: string
+        photo:
+          type: string
+        teams:
+          type: string
+        active:
+          type: boolean
+    PersonResponse:
       type: object
       properties:
         persons:

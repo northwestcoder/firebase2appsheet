@@ -38,20 +38,13 @@ def createperson():
 
 @app.route('/persons', methods=['GET'])
 def read():
-	"""
-		read() : Fetches documents from Firestore collection as JSON
-		todo : Return document that matches query ID
-		all_todos : Return all documents
-	"""
+
 	try:
-		# Check if ID was passed to URL query
-		todo_id = request.args.get('id')    
-		if todo_id:
-			todo = persons.document(todo_id).get()
-			return jsonify(todo.to_dict()), 200
-		else:
-			all_todos = [doc.to_dict() for doc in persons.stream()]
-			return jsonify(all_todos), 200
+		all_persons = [doc.to_dict() for doc in persons.stream()]
+		jsonresult = jsonify({"persons" : all_persons}), 200
+#		appsheetresult["persons"] = jsonresult
+		return jsonresult
+#		return jsonify("persons" : all_persons), 200
 	except Exception as e:
 		return f"An Error Occured: {e}"
 
@@ -65,13 +58,9 @@ def readone(id):
 		return f"An Error Occured: {e}"
 
 
-@app.route('/persons/{id}', methods=['POST', 'PUT'])
-def update():
-	"""
-		update() : Update document in Firestore collection with request body
-		Ensure you pass a custom ID as part of json body in post request
-		e.g. json={'id': '1', 'title': 'Write a blog post today'}
-	"""
+@app.route('/persons/<id>', methods=['POST', 'PUT'])
+def update(id):
+
 	try:
 		id = request.json['id']
 		persons.document(id).update(request.json)
@@ -80,26 +69,17 @@ def update():
 		return f"An Error Occured: {e}"
 
 
-@app.route('/delete', methods=['GET', 'DELETE'])
-def delete():
-	"""
-		delete() : Delete a document from Firestore collection
-	"""
+@app.route('/persons/<id>', methods=['DELETE'])
+def delete(id):
+
 	try:
-		# Check for ID in URL query
-		todo_id = request.args.get('id')
-		persons.document(todo_id).delete()
+		persons.document(id).delete()
 		return jsonify({"success": True}), 200
 	except Exception as e:
 		return f"An Error Occured: {e}"
 
 
 
-#def appsheet2firebase():
-#	test = oaspec.oas_endpoint()
-#	print(test)
-#if __name__ == '__main__':
-#	appsheet2firebase()
 
 port = int(os.environ.get('PORT', 8080))
 if __name__ == '__main__':
