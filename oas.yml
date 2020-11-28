@@ -298,11 +298,14 @@ components:
       required:
         - id
         - Name
+        - personid
       additionalProperties: true
       properties:
         id:
           type: string
         Name:
+          type: string
+        personid:
           type: string
         type:
           type: string
