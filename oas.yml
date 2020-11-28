@@ -428,7 +428,9 @@ components:
           type: string
         personid:
           type: string
-        type:
+        placeid:
+          type: string
+        eventtype:
           type: string
         timestamp:
           type: string
