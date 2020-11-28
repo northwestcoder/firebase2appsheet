@@ -71,11 +71,11 @@ def readsettings():
 	except Exception as e:
 		return f"An Error Occurred: {e}"
 
-@app.route('/settings/<setting>', methods=['PUT'])
-def updateheartbeat(setting):
+@app.route('/settings/<id>', methods=['PUT'])
+def updateheartbeat(id):
 
 	try:
-		settings.document(setting).update(request.json)
+		settings.document(id).update(request.json)
 		return jsonify({"success": True}), 200
 	except Exception as e:
 		return f"An Error Occurred: {e}"
