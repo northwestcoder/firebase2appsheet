@@ -66,7 +66,6 @@ def readsettings():
 	try:
 		all_settings = [doc.to_dict() for doc in settings.stream()]
 		jsonresult = jsonify({"settings" : all_settings}), 200
-#		print(all_settings["Heartbeat"])
 		return jsonresult
 	except Exception as e:
 		return f"An Error Occurred: {e}"
@@ -75,6 +74,7 @@ def readsettings():
 def updateheartbeat(id):
 
 	try:
+		id = request.json['id']
 		settings.document(id).update(request.json)
 		return jsonify({"success": True}), 200
 	except Exception as e:
@@ -84,12 +84,6 @@ def updateheartbeat(id):
 # ALL OTHER ROUTES
 
 
-@app.route('/heartbeat', methods=['GET'])
-def start_heartbeat():
-
-	heartbeat_process = Process(target=heartbeat)
-	heartbeat_process.start()
-	return jsonify({"success": True}), 200
 
 @app.route('/oaspec', methods=['GET'])
 def getoas():
