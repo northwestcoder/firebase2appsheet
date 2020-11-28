@@ -234,6 +234,120 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
+  /places:
+    get:
+      tags:
+        - Place
+      description: Return list of places.
+      summary: Returns list of existing places.
+      operationId: getPlaces
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlaceResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    post:
+      tags:
+        - Place
+      description: Create Place
+      summary: Create a new place.
+      operationId: createPlace
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Place'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlaceResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    put:
+      tags:
+        - Place
+      description: Update Place completely
+      summary: Update an existing place.
+      operationId: updatePlace
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Place'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlaceResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    
+  '/places/{id}':
+    get:
+      tags:
+        - Place
+      description: Return place details.
+      summary: Return details for an existing place.
+      operationId: getPlace
+      parameters:
+        - $ref: '#/components/parameters/placeIdPath'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlaceResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      tags:
+        - Place
+      description: Delete place.
+      summary: Delete an existing place.
+      operationId: deletePlace
+      parameters:
+        - $ref: '#/components/parameters/placeIdPath'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlaceResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
 security:
   - ApiKeyAuth: []
 components:
@@ -254,6 +368,13 @@ components:
       in: path
       name: id
       description: The event identifier.
+      required: true
+      schema:
+        type: string
+    placeIdPath:
+      in: path
+      name: id
+      description: The place identifier.
       required: true
       schema:
         type: string
@@ -330,7 +451,35 @@ components:
         persons:
           type: array
           items:
-            $ref: '#/components/schemas/Event'            
+            $ref: '#/components/schemas/Event'   
+    Place:
+      type: object
+      required:
+        - id
+        - Name
+      additionalProperties: true
+      properties:
+        id:
+          type: string
+        Name:
+          type: string
+        latlong:
+          type: string
+        address:
+          type: string
+        photo:
+          type: string
+        mainline:
+          type: string
+        category:
+          type: string
+    PlaceResponse:
+      type: object
+      properties:
+        persons:
+          type: array
+          items:
+            $ref: '#/components/schemas/Place'         
     Error:
       type: object
       properties:
