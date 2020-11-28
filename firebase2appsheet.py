@@ -2,12 +2,10 @@ import os
 from flask import Flask, request, jsonify
 from firebase_admin import credentials, firestore, initialize_app
 
-
 import oaspec
 
-
-# Initialize Flask App
 app = Flask(__name__)
+
 
 # Initialize Firestore DB
 cred = credentials.Certificate('key.json')
@@ -16,6 +14,7 @@ db = firestore.client()
 persons = db.collection('persons')
 events = db.collection('events')
 places = db.collection('places')
+things = db.collection('things')
 
 @app.route('/oaspec', methods=['GET'])
 def getoas():
@@ -23,7 +22,6 @@ def getoas():
 	   return oaspec.oas_endpoint()
 	except Exception as e:
 		return f"An Error Occured reading oas spec: {e}"
-
 
 @app.route('/persons', methods=['POST'])
 def createperson():
@@ -185,9 +183,60 @@ def deleteplace(id):
     return f"An Error Occured: {e}"
 
 
+@app.route('/things', methods=['POST'])
+def creatething():
+
+	try:
+		id = request.json['id']
+		things.document(id).set(request.json)
+		return jsonify({"success": True}), 200
+	except Exception as e:
+		return f"An Error Occured: {e}"
+
+@app.route('/things', methods=['GET'])
+def readthing():
+
+	try:
+		all_things = [doc.to_dict() for doc in things.stream()]
+		jsonresult = jsonify({"things" : all_things}), 200
+#		appsheetresult["things"] = jsonresult
+		return jsonresult
+#		return jsonify("things" : all_things), 200
+	except Exception as e:
+		return f"An Error Occured: {e}"
+
+@app.route('/things/<id>', methods=['GET'])
+def readonething(id):
+
+	try:
+		todo = things.document(id).get()
+		return jsonify(todo.to_dict()), 200
+	except Exception as e:
+		return f"An Error Occured: {e}"
+
+
+@app.route('/things/<id>', methods=['POST', 'PUT'])
+def updatething(id):
+
+	try:
+		id = request.json['id']
+		things.document(id).update(request.json)
+		return jsonify({"success": True}), 200
+	except Exception as e:
+		return f"An Error Occured: {e}"
+
+
+@app.route('/things/<id>', methods=['DELETE'])
+def deletething(id):
+
+	try:
+		things.document(id).delete()
+		return jsonify({"success": True}), 200
+	except Exception as e:
+		return f"An Error Occured: {e}"
+
 
 port = int(os.environ.get('PORT', 8080))
 if __name__ == '__main__':
 	app.run(threaded=True, host='0.0.0.0', port=8080)
-
 

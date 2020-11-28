@@ -120,6 +120,121 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
+  /things:
+    get:
+      tags:
+        - Thing
+      description: Return list of things.
+      summary: Returns list of existing things.
+      operationId: getThings
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThingResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    post:
+      tags:
+        - Thing
+      description: Create Thing
+      summary: Create a new thing.
+      operationId: createThing
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Thing'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThingResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    put:
+      tags:
+        - Thing
+      description: Update Thing completely
+      summary: Update an existing thing.
+      operationId: updateThing
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Thing'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThingResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    
+  '/things/{id}':
+    get:
+      tags:
+        - Thing
+      description: Return thing details.
+      summary: Return details for an existing thing.
+      operationId: getThing
+      parameters:
+        - $ref: '#/components/parameters/thingIdPath'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThingResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      tags:
+        - Thing
+      description: Delete thing.
+      summary: Delete an existing thing.
+      operationId: deleteThing
+      parameters:
+        - $ref: '#/components/parameters/thingIdPath'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThingResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
   /events:
     get:
       tags:
@@ -364,6 +479,13 @@ components:
       required: true
       schema:
         type: string
+    thingIdPath:
+      in: path
+      name: id
+      description: The person identifier.
+      required: true
+      schema:
+        type: string
     eventIdPath:
       in: path
       name: id
@@ -430,6 +552,8 @@ components:
           type: string
         placeid:
           type: string
+        thingid:
+          type: string
         eventtype:
           type: string
         timestamp:
@@ -481,7 +605,39 @@ components:
         persons:
           type: array
           items:
-            $ref: '#/components/schemas/Place'         
+            $ref: '#/components/schemas/Place'
+    Thing:
+      type: object
+      required:
+        - id
+        - Name
+      additionalProperties: true
+      properties:
+        id:
+          type: string
+        Name:
+          type: string
+        productcode:
+          type: string
+        barcode:
+          type: string
+        startdate:
+          type: string
+        enddate:
+          type: string
+        photo:
+          type: string
+        price:
+          type: number
+        supplier:
+          type: string
+    ThingResponse:
+      type: object
+      properties:
+        persons:
+          type: array
+          items:
+            $ref: '#/components/schemas/Thing'        
     Error:
       type: object
       properties:
