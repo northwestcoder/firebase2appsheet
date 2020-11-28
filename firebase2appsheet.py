@@ -11,7 +11,7 @@ import oaspec
 app = Flask(__name__)
 
 # Initialize Firestore DB
-cred = credentials.Certificate('./key.json')
+cred = credentials.Certificate('key.json')
 default_app = initialize_app(cred)
 db = firestore.client()
 persons = db.collection('persons')
