@@ -2,7 +2,7 @@
 
 #### Note: This is not an official Google Product.
 
-### Requirements:
+### Requirements
 
 - Access to Google Cloud and a Google cloud project with billing enabled
 - Access to www.appsheet.com - registration is free
@@ -42,9 +42,16 @@
 
 - Cloud run will nicely wrap this python flask server running on http/8080 inside of a SSL instance running on https/443.
 
-- Once build is complete, your endpoint is ready for use by Appsheet (or even postman at this point). Take note of the end point at the very end of the build steps, e.g.
+- Once build is complete, your endpoint is *almost ready* for use by Appsheet (or even postman at this point). Take note of the end point at the very end of the build steps, e.g.
 
 `https://firebase2appsheet-{{randomid}}-uc.a.run.app/`
+
+- Now, we need to edit our oas.yml file and change the "URL" parameter at the very top to our new cloud run URL. (we again used the Theia cloud editor for this). Then run the build a second time:
+
+`gcloud builds submit --config cloudbuild.yaml .`
+
+- The endpoint/URL for our app will not change this second time around. We'll use it in the next step.
+
 
 ### High Level Steps - Google Appsheet
 
@@ -71,7 +78,7 @@
 
 - Because this example assumes you are connecting with www.appsheet.com, there are thus all kinds of complications that we nicely avoid around oAuth, advanced OpenAPI Spec concepts, nested JSON in firestore, etc, etc.. Appsheet assumes that each firebase collection is a top-level "table" whose documents (children) are all *indentical in structure*. Because of this simplicity, there's a bunch of code-worrying that does *not* have to happen here.
 
-- There's also a secret "heartbeat" setting which defaults to OFF. If ON, the cloud run instance will create Firestore data once a minute. Enabling this is left as a fun challenge for the reader. :)
+- There's also a secret "heartbeat" setting which defaults to OFF. If ON, the cloud run instance will create Firestore data once every five seconds. If OFF, the heartbeat checks every five minutes to see if someone has turned on the setting. Enabling this is left as a fun challenge for the reader. :)
 
 ### How to add your own tables
 
@@ -79,7 +86,7 @@
 
 - High level ideas here:
 
-	- You'll need to edit oas.yml to reference your new table
+	- You'll need to edit oas.yml to reference your new table.
 	- You'll want to make a copy of one of the route_*.py files, study it, and reference your new table accordingly.
 	- You'll need to modify firebase2appsheet.py to reference your new route_*.py file.
 	- You'll want to create an empty collection in Firebase for your data.

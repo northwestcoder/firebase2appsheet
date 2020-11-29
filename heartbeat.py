@@ -3,6 +3,7 @@ import random
 import time
 from datetime import datetime
 
+from firebase_admin import firestore
 import client
 
 # event polling if heartbeat entry is set to ON
@@ -23,18 +24,23 @@ def heartbeat():
 		if (status == "ON"):	
 			print("status is ON, we are in heartbeat mode")
 
-			randomvalue = random.randrange(25)
+			randomduration = random.randrange(25)
 			recordid = id_generator()
-			now = datetime.now()
-			dt_string = now.strftime("%m/%d/%Y %H:%M:%S")
-			print(dt_string)
+			# lower left: 33.417827, -116.485679
+			# upper right: 47.148747, -79.837476
+			randlat = random.randint(33, 47)
+			randlong = random.randint(-116,-79)
+			randomlatlong = str(randlat) + ", " + str(randlong)
+			randomimageurl = "http://ipsumimage.appspot.com/300?s=60&f=000000&b=CCCCCC&l=" + recordid
+
 			try:
 				ping = {'id': recordid, 'Name': 'heartbeat event ' + recordid, 'personid': 'abc123', 'placeid': 'abc123', 
-						'thingid': 'abc123','eventtype' : 'party', 'timestamp' : dt_string, 
-						'duration': randomvalue, 'address': '3051 NE 86th St, Seattle WA 98115', 
-						'latlong': '47.680989, -122.303969', 'photo':'', 'barcode': '', 'notes' : ''}
-			
+				'thingid': 'abc123','eventtype' : 'heartbeat', 
+				'duration': randomduration, 'address': '3051 NE 86th St, Seattle WA 98115', 
+				'latlong': randomlatlong, 'photo': randomimageurl, 'barcode': '0123456789abcdef', 'notes' : 'some notes go here..',
+				'timestamp':firestore.SERVER_TIMESTAMP}
 				client.db.collection(u'events').document(recordid).set(ping)
+
 				heartbeatstatus = client.db.collection(u'settings').document(u'heartbeat')
 				status = heartbeatstatus.get().to_dict()["value"]
 				time.sleep(5)

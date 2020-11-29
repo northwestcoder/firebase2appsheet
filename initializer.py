@@ -29,7 +29,9 @@ def initialdata():
 	eventref.set({'id': 'abc123', 'Name': 'placeholder event abc123', 'personid': 'abc123', 'placeid': 'abc123', 
 				'thingid': 'abc123','eventtype' : 'party', 'timestamp' : dt_string, 
 				'duration': 1, 'address': '3051 NE 86th St, Seattle WA 98115', 
-				'latlong': '47.680989, -122.303969', 'photo':'', 'barcode': '0123456789abcdef', 'notes' : 'notes go here'})
+				'latlong': '47.680989, -122.303969', 
+				'photo':'https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Cloud_Covered.png', 
+				'barcode': '0123456789abcdef', 'notes' : 'notes go here'})
 
 	contentref = client.db.collection('contents').document(u'abc123')
 	contentref.set({'id': 'abc123', 'content': 'placeholder content abc123'})
