@@ -72,3 +72,19 @@
 - Because this example assumes you are connecting with www.appsheet.com, there are thus all kinds of complications that we nicely avoid around oAuth, advanced OpenAPI Spec concepts, nested JSON in firestore, etc, etc.. Appsheet assumes that each firebase collection is a top-level "table" whose documents (children) are all *indentical in structure*. Because of this simplicity, there's a bunch of code-worrying that does *not* have to happen here.
 
 - There's also a secret "heartbeat" setting which defaults to OFF. If ON, the cloud run instance will create Firestore data once a minute. Enabling this is left as a fun challenge for the reader. :)
+
+### How to add your own tables
+
+- You're going to need to dig into the code for this - we've tried to make it somewhat modular. 
+
+- High level ideas here:
+
+	- You'll need to edit oas.yml to reference your new table
+	- You'll want to make a copy of one of the route_*.py files, study it, and reference your new table accordingly.
+	- You'll need to modify firebase2appsheet.py to reference your new route_*.py file.
+	- You'll want to create an empty collection in Firebase for your data.
+	- We might have missed something - please let us know!
+
+
+
+
