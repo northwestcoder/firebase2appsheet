@@ -36,7 +36,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Setting'
+              $ref: '#/components/schemas/Settings'
         required: true
       responses:
         '200':
