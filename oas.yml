@@ -26,34 +26,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
-    post:
-      tags:
-        - Settings
-      description: Create Settings
-      summary: Create a new settings.
-      operationId: createSettings
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Settings'
-        required: true
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SettingsResponse'
-        '400':
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
     put:
       tags:
-        - Setting
+        - Settings
       description: Update Setting completely
       summary: Update an existing setting.
       operationId: updateSetting
@@ -61,7 +36,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Settings'
+              $ref: '#/components/schemas/Setting'
         required: true
       responses:
         '200':
@@ -75,15 +50,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
-    
+                $ref: '#/components/schemas/ErrorResponse'   
   '/settings/{id}':
     get:
       tags:
         - Setting
       description: Return setting details.
       summary: Return details for an existing setting.
-      operationId: getSettings
+      operationId: getSetting
       parameters:
         - $ref: '#/components/parameters/settingIdPath'
       responses:
@@ -190,7 +164,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
-    
   '/persons/{id}':
     get:
       tags:
