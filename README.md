@@ -23,9 +23,11 @@ cd firebase2appsheet`
 
 - create an empty file named *apikey* and make up an api key for later use, e.g. long alphanumerics, e.g.
 
-`echo -n "mylongapikey-123890sdflkjw45" > apikey` - you will need this below.
+`echo -n "mylongapikey-123890sdflkjw45" > apikey`
 
-- Paste your key.json contents into the empty key.json file provided (we used the Eclipse Theia cloud shell editor for this)
+You will need this below. Storing api keys in a container like this is fragile and should only be used for testing.
+
+- Paste your key.json contents into the empty key.json file provided (we used the Eclipse Theia cloud shell editor for this). Same comment as previous step regarding fragility.
 
 - Run cloud build:
 
@@ -59,5 +61,5 @@ https://github.com/GoogleContainerTools/kaniko#kaniko---build-images-in-kubernet
 	- contents
 	- settings
 
-- because this example assumes you are connecting with www.appsheet.com there are all kinds of complications that we can avoid around oAuth, advanced OpenAPI Spec concepts, nested JSON in firestore, etc. Appsheet assumes that each firebase collection is a top-level "table" whose documents (children) are all *indentical in structure*. Because of this simplicity, there's a bunch of code worrying that does *not* have to happen...
+- because this example assumes you are connecting with www.appsheet.com there are all kinds of complications that we can avoid around oAuth, advanced OpenAPI Spec concepts, nested JSON in firestore, etc. Appsheet assumes that each firebase collection is a top-level "table" whose documents (children) are all *indentical in structure*. Because of this simplicity, there's a bunch of code-worrying that does *not* have to happen here..
 

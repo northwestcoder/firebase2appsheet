@@ -4,7 +4,7 @@ from flask import request, jsonify
 import client
 from apiauth import require_apikey
 
-settingsroute = Blueprint('things', __name__)
+settingsroute = Blueprint('settings', __name__)
 
 settings = client.db.collection('things')
 

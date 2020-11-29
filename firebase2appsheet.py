@@ -21,6 +21,8 @@ app.register_blueprint(personsroute)
 app.register_blueprint(placesroute)
 app.register_blueprint(thingsroute)
 app.register_blueprint(contentsroute)
+app.register_blueprint(settingsroute)
+
 
 @app.route('/oaspec', methods=['GET'])
 def getoas():
