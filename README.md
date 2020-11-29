@@ -14,18 +14,16 @@
 
 - Sign up for Google Firestore and create a new firestore project. The name is selectable - we chose "appsheet-firestore"
 
-- Create a Google Cloud service account and JSON key. From console.firebase.com, click on project settings >> service Accounts >> manage Service Account permissions. This should redirect you to the Google IAM admin page. From here you want t ocreate a new service account and then generate a JSON key. We have deliberately avoided providing screenshots for this step because they keep changing how the UX looks :)
+- Create a Google Cloud service account and JSON key. From console.firebase.com, click on project settings >> service Accounts >> manage Service Account permissions. This should redirect you to the Google IAM admin page. From here you will need to create a new service account and then generate a JSON key. We have deliberately avoided providing screenshots for this step because they keep changing how the UX looks :) the bottom line is you need a valid key.json file for use with this project.
 
-- The bottom line is you need a valid key.json file for use with this project :) 
+- Download this very github project to your Google cloud shell, e.g. from your cloud shell home directory:
 
-- Download this project to your Google cloud shell, e.g. from your cloud shell home directory:
-
-`git clone https://github.com/northwestcoder/firebase2appsheet`
-`cd firebase2appsheet`
+`git clone https://github.com/northwestcoder/firebase2appsheet
+cd firebase2appsheet`
 
 - create an empty file named *apikey* and make up an api key for later use, e.g. long alphanumerics, e.g.
 
-`echo "mylongapikey-123890sdflkjw45" > apikey` - you will need this below.
+`echo -n "mylongapikey-123890sdflkjw45" > apikey` - you will need this below.
 
 - Paste your key.json contents into the empty key.json file provided (we used the Eclipse Theia cloud shell editor for this)
 
@@ -43,7 +41,7 @@
 
 `https://firebase2appsheet-{{randomid}}-uc.a.run.app/oaspec`
 
-
+and the apikey you configured. For more information on the rest API connector in Appsheet go [here](https://help.appsheet.com/en/articles/4438873-apigee-data-source) 
 
 ### Background
 
