@@ -39,7 +39,18 @@
 
 ### Background
 
-We use Kaniko build images, check it out here:
+- We use Kaniko build images, check it out here:
 https://github.com/GoogleContainerTools/kaniko#kaniko---build-images-in-kubernetes
 
-In firebase, we created a simple data model of people, places, things, and events. There is also a special settings table.
+- In firebase, we created a simple data model of people, places, things, and events. There is also a special settings table.
+
+- when you fire up this client, it will try to create at least one record for each of these firestore collections:
+
+	- persons
+	- places
+	- things
+	- events
+	- contents
+	- settings
+
+
