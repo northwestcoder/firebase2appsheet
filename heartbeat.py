@@ -23,23 +23,26 @@ def heartbeat():
 		if (status == "ON"):	
 			print("status is ON, we are in heartbeat mode")
 
+			randomvalue = random.randrange(25)
 			recordid = id_generator()
 			now = datetime.now()
-			dt_string = now.strftime("%d/%m/%Y %H:%M:%S %p")
+			dt_string = now.strftime("%m/%d/%Y %H:%M:%S")
 			print(now)
 			try:
 				ping = {'id': recordid, 'Name': 'heartbeat event ' + recordid, 'personid': 'abc123', 'placeid': 'abc123', 
 						'thingid': 'abc123','eventtype' : 'party', 'timestamp' : dt_string, 
-						'duration': 3, 'address': '3051 NE 86th St, Seattle WA 98115', 
+						'duration': randomvalue, 'address': '3051 NE 86th St, Seattle WA 98115', 
 						'latlong': '47.680989, -122.303969', 'photo':'', 'barcode': '', 'notes' : ''}
 			
 				client.db.collection(u'events').document(recordid).set(ping)
 				heartbeatstatus = client.db.collection(u'settings').document(u'heartbeat')
 				status = heartbeatstatus.get().to_dict()["value"]
+				time.sleep(5)
 			except Exception as e:
+				time.sleep(5)
 				return f"An Error Occurred: {e}"
 		else:
 			print("status is OFF, heartbeat mode paused")	
 			heartbeatstatus = client.db.collection(u'settings').document(u'heartbeat')
 			status = heartbeatstatus.get().to_dict()["value"]
-		time.sleep(5)
+			time.sleep(300)
