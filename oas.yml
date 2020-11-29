@@ -61,7 +61,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Setting'
+              $ref: '#/components/schemas/Settings'
         required: true
       responses:
         '200':
@@ -113,7 +113,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/settingResponse'
+                $ref: '#/components/schemas/SettingResponse'
         '400':
           description: Error
           content:
@@ -758,7 +758,7 @@ components:
         Setting:
           type: array
           items:
-            $ref: '#/components/schemas/Setting'    
+            $ref: '#/components/schemas/Settings'    
     Content:
       type: object
       required:
