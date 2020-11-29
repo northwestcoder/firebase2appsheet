@@ -741,7 +741,7 @@ components:
       schema:
         type: string                 
   schemas:
-    Setting:
+    Settings:
       type: object
       required:
         - id
