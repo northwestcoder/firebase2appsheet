@@ -18,9 +18,11 @@
 
 ### High Level Steps - Google Firebase and Cloud Run
 
-- Sign up for Google Firestore and create a new firestore project. The name is selectable - we chose "appsheet-firestore"
+- Sign up for [Google Firestore](https://firebase.google.com/) and create a new firestore project. The name is selectable - we chose "appsheet-firestore" for our example.
 
-- Create a Google Cloud service account and JSON key. From console.firebase.com, click on project settings >> service Accounts >> manage Service Account permissions. This should redirect you to the Google IAM admin page. From here you will need to create a new service account and then generate a JSON key. We have deliberately avoided providing screenshots for this step because they keep changing how the UX looks :) the bottom line is you need a valid key.json file for use with this project.
+- Create a Google Cloud service account and JSON key. From the Firebase console, click on project settings >> Service Accounts >> Manage Service Account permissions. This should redirect you to the Google IAM admin page. From here you will need to create a new service account and then generate a JSON key. We have deliberately avoided providing screenshots for this step because they keep changing how the UX looks :) the bottom line is you need a valid key.json file for use with this project.
+
+- Create or use your desired Google Cloud Project and open up the cloud shell.
 
 - Download this very github project to your Google cloud shell, e.g. from your cloud shell home directory:
 
@@ -29,7 +31,6 @@
 `cd firebase2appsheet`
 
 - create an empty file named *apikey* and make up an api key for later use, e.g. long alphanumerics. You will need this in a future step below. Storing api keys in a container like this is fragile and should only be used for testing.
-
 
 `echo -n "mylongapikey-123890sdflkjw45" > apikey`
 
