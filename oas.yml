@@ -19,7 +19,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SettingResponse'
+                $ref: '#/components/schemas/SettingsResponse'
         '400':
           description: Error
           content:
@@ -44,7 +44,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SettingResponse'
+                $ref: '#/components/schemas/SettingsResponse'
         '400':
           description: Error
           content:
@@ -69,7 +69,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SettingResponse'
+                $ref: '#/components/schemas/SettingsResponse'
         '400':
           description: Error
           content:
@@ -92,7 +92,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SettingResponse'
+                $ref: '#/components/schemas/SettingsResponse'
         '400':
           description: Error
           content:
@@ -113,7 +113,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SettingResponse'
+                $ref: '#/components/schemas/SettingsResponse'
         '400':
           description: Error
           content:
@@ -590,7 +590,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ContentResponse'
+                $ref: '#/components/schemas/ContentsResponse'
         '400':
           description: Error
           content:
@@ -615,7 +615,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ContentResponse'
+                $ref: '#/components/schemas/ContentsResponse'
         '400':
           description: Error
           content:
@@ -640,7 +640,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ContentResponse'
+                $ref: '#/components/schemas/ContentsResponse'
         '400':
           description: Error
           content:
@@ -663,7 +663,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ContentResponse'
+                $ref: '#/components/schemas/ContentsResponse'
         '400':
           description: Error
           content:
@@ -684,7 +684,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ContentResponse'
+                $ref: '#/components/schemas/ContentsResponse'
         '400':
           description: Error
           content:
@@ -752,14 +752,14 @@ components:
           type: string
         value:
           type: string
-    SettingResponse:
+    SettingsResponse:
       type: object
       properties:
         Settings:
           type: array
           items:
             $ref: '#/components/schemas/Settings'    
-    Content:
+    Contents:
       type: object
       required:
         - id
@@ -770,13 +770,13 @@ components:
           type: string
         content:
           type: string
-    ContentResponse:
+    ContentsResponse:
       type: object
       properties:
-        Content:
+        Contents:
           type: array
           items:
-            $ref: '#/components/schemas/Content'    
+            $ref: '#/components/schemas/Contents'    
     Person:
       type: object
       required:
