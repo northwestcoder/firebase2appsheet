@@ -6,7 +6,7 @@ from apiauth import require_apikey
 
 eventsroute = Blueprint('events', __name__)
 
-events = client.db.collection('events').order_by(u'timestamp')
+events = client.db.collection('events')
 
 @eventsroute.route('/events', methods=['POST'])
 @require_apikey
@@ -24,7 +24,7 @@ def createevent():
 def readevent():
 
 	try:
-		all_events = [doc.to_dict() for doc in events.stream()]
+		all_events = [doc.to_dict() for doc in events.order_by(u'timestamp').stream()]
 		jsonresult = jsonify({"events" : all_events}), 200
 		return jsonresult
 	except Exception as e:
