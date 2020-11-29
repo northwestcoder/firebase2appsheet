@@ -59,4 +59,5 @@ https://github.com/GoogleContainerTools/kaniko#kaniko---build-images-in-kubernet
 	- contents
 	- settings
 
+- because this example assumes you are connecting with www.appsheet.com there are all kinds of complications that we can avoid around oAuth, advanced OpenAPI Spec concepts, nested JSON in firestore, etc. Appsheet assumes that each firebase collection is a top-level "table" whose documents (children) are all *indentical in structure*. Because of this simplicity, there's a bunch of code worrying that does *not* have to happen...
 

@@ -645,8 +645,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
-security:
-  - ApiKeyAuth: []
 components:
   securitySchemes:
     ApiKeyAuth:
@@ -887,3 +885,5 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Error'
+security:
+  - ApiKeyAuth: []
