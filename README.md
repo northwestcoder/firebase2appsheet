@@ -10,7 +10,7 @@
 - If you have never done this particular pipeline before, we recommend [this tutorial](https://cloud.google.com/community/tutorials/building-flask-api-with-cloud-firestore-and-deploying-to-cloud-run) first.
 
 
-### High Level Steps
+### High Level Steps - Google Firebase and Cloud Run
 
 - Sign up for Google Firestore and create a new firestore project. The name is selectable - we chose "appsheet-firestore"
 
@@ -39,11 +39,15 @@ You will need this below. Storing api keys in a container like this is fragile a
 
 `https://firebase2appsheet-{{randomid}}-uc.a.run.app/`
 
+
+
 - in Appsheet.com, create a new Rest API connection ("Apigee") using this endpoint: 
 
 `https://firebase2appsheet-{{randomid}}-uc.a.run.app/oaspec`
 
 and the apikey you configured. For more information on the rest API connector in Appsheet go [here](https://help.appsheet.com/en/articles/4438873-apigee-data-source) 
+
+- We have also provided a [template app](https://www.appsheet.com/samples/Companion-app-for-a-github-project-See-About--More-Information?appGuidString=4615279d-6ace-4adb-8eda-241bdf692bdc) which is currently using Google Sheets. The premise here is that if you were successful in following all of the instructions above, you can swap out - one by one - each table reference in this template app, from Google Sheets to your newly configured rest API data source.
 
 ### Background
 
