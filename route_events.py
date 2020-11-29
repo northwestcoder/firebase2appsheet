@@ -6,7 +6,7 @@ from apiauth import require_apikey
 
 eventsroute = Blueprint('events', __name__)
 
-events = client.db.collection('events')
+events = client.db.collection('events').order_by(u'timestamp')
 
 @eventsroute.route('/events', methods=['POST'])
 @require_apikey
