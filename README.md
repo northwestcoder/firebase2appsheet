@@ -18,8 +18,9 @@
 
 - Download this very github project to your Google cloud shell, e.g. from your cloud shell home directory:
 
-`git clone https://github.com/northwestcoder/firebase2appsheet
-cd firebase2appsheet`
+`git clone https://github.com/northwestcoder/firebase2appsheet`
+
+`cd firebase2appsheet`
 
 - create an empty file named *apikey* and make up an api key for later use, e.g. long alphanumerics, e.g.
 
