@@ -22,11 +22,10 @@
 
 `cd firebase2appsheet`
 
-- create an empty file named *apikey* and make up an api key for later use, e.g. long alphanumerics, e.g.
+- create an empty file named *apikey* and make up an api key for later use, e.g. long alphanumerics. You will need this in a future step below. Storing api keys in a container like this is fragile and should only be used for testing.
+
 
 `echo -n "mylongapikey-123890sdflkjw45" > apikey`
-
-You will need this below. Storing api keys in a container like this is fragile and should only be used for testing.
 
 - Paste your key.json contents into the empty key.json file provided (we used the Eclipse Theia cloud shell editor for this). Same comment as previous step regarding fragility.
 
@@ -46,7 +45,7 @@ You will need this below. Storing api keys in a container like this is fragile a
 
 `https://firebase2appsheet-{{randomid}}-uc.a.run.app/oaspec`
 
-and the apikey you configured. For more information on the rest API connector in Appsheet go [here](https://help.appsheet.com/en/articles/4438873-apigee-data-source) 
+using the apikey you configured - you also need to change *randomid* above according to your cloud build URL. For more information on the rest API connector in Appsheet go [here](https://help.appsheet.com/en/articles/4438873-apigee-data-source) 
 
 - We have also provided a [template app](https://www.appsheet.com/samples/Companion-app-for-a-github-project-See-About--More-Information?appGuidString=4615279d-6ace-4adb-8eda-241bdf692bdc) which is currently using Google Sheets. The premise here is that if you were successful in following all of the instructions above, you can swap out - one by one - each table reference in this template app, from Google Sheets to your newly configured rest API data source.
 
@@ -66,6 +65,6 @@ https://github.com/GoogleContainerTools/kaniko#kaniko---build-images-in-kubernet
 	- contents
 	- settings
 
-- because this example assumes you are connecting with www.appsheet.com there are all kinds of complications that we can avoid around oAuth, advanced OpenAPI Spec concepts, nested JSON in firestore, etc. Appsheet assumes that each firebase collection is a top-level "table" whose documents (children) are all *indentical in structure*. Because of this simplicity, there's a bunch of code-worrying that does *not* have to happen here..
+- Because this example assumes you are connecting with www.appsheet.com, there are thus all kinds of complications that we nicely avoid around oAuth, advanced OpenAPI Spec concepts, nested JSON in firestore, etc, etc.. Appsheet assumes that each firebase collection is a top-level "table" whose documents (children) are all *indentical in structure*. Because of this simplicity, there's a bunch of code-worrying that does *not* have to happen here.
 
 - There's also a secret "heartbeat" setting which defaults to OFF. If ON, the cloud run instance will create Firestore data once a minute. Enabling this is left as a fun challenge for the reader. :)
