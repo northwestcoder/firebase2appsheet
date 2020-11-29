@@ -83,7 +83,7 @@ paths:
         - Setting
       description: Return setting details.
       summary: Return details for an existing setting.
-      operationId: getSetting
+      operationId: getSettings
       parameters:
         - $ref: '#/components/parameters/settingIdPath'
       responses:
@@ -648,7 +648,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
     
-  '/content/{id}':
+  '/contents/{id}':
     get:
       tags:
         - Content
