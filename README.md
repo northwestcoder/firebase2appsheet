@@ -9,6 +9,12 @@
 
 - If you have never done this particular pipeline before, we recommend [this tutorial](https://cloud.google.com/community/tutorials/building-flask-api-with-cloud-firestore-and-deploying-to-cloud-run) first.
 
+### Run it standalone
+
+- If for whatever reason, you want to run this flask server on your local machine, here are the quick notes: a) it's python 3, b) we make no assumptions about virtual envs or module support, c) it's pretty straightforward and should work if you are familar with python.
+
+- **Otherwise**, the rest of these instructions are canned and tutorialized and should work as-is.
+
 
 ### High Level Steps - Google Firebase and Cloud Run
 
