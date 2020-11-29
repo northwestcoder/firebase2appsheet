@@ -6,7 +6,7 @@ from apiauth import require_apikey
 
 settingsroute = Blueprint('settings', __name__)
 
-settings = client.db.collection('things')
+settings = client.db.collection('settings')
 
 @settingsroute.route('/settings', methods=['GET'])
 @require_apikey
