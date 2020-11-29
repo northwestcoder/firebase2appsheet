@@ -39,7 +39,7 @@ You will need this below. Storing api keys in a container like this is fragile a
 
 `https://firebase2appsheet-{{randomid}}-uc.a.run.app/`
 
-
+### High Level Steps - Google Appsheet
 
 - in Appsheet.com, create a new Rest API connection ("Apigee") using this endpoint: 
 
@@ -67,3 +67,4 @@ https://github.com/GoogleContainerTools/kaniko#kaniko---build-images-in-kubernet
 
 - because this example assumes you are connecting with www.appsheet.com there are all kinds of complications that we can avoid around oAuth, advanced OpenAPI Spec concepts, nested JSON in firestore, etc. Appsheet assumes that each firebase collection is a top-level "table" whose documents (children) are all *indentical in structure*. Because of this simplicity, there's a bunch of code-worrying that does *not* have to happen here..
 
+- There's also a secret "heartbeat" setting which defaults to OFF. If ON, the cloud run instance will create Firestore data once a minute. Enabling this is left as a fun challenge for the reader. :)
