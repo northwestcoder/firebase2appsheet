@@ -26,6 +26,31 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
+    post:
+      tags:
+        - Settings
+      description: Create Settings
+      summary: Create a new settings.
+      operationId: createSettings
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Settings'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SettingResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
     put:
       tags:
         - Setting
@@ -68,6 +93,27 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SettingResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      tags:
+        - Setting
+      description: Delete setting.
+      summary: Delete an existing setting.
+      operationId: deleteSetting
+      parameters:
+        - $ref: '#/components/parameters/settingIdPath'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/settingResponse'
         '400':
           description: Error
           content:
@@ -730,7 +776,7 @@ components:
         Setting:
           type: array
           items:
-            $ref: '#/components/schemas/Setting'    
+            $ref: '#/components/schemas/Content'    
     Person:
       type: object
       required:
