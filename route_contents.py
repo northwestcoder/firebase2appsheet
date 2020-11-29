@@ -5,13 +5,10 @@ import client
 from apiauth import require_apikey
 
 contentsroute = Blueprint('contents', __name__)
-
-contents = client.db.collection('contents')
-
+contents =      client.db.collection('contents')
 
 @contentsroute.route('/contents', methods=['POST'])
 @require_apikey
-
 def createcontent():
 
 	try:
@@ -23,9 +20,6 @@ def createcontent():
 
 @contentsroute.route('/contents', methods=['GET'])
 @require_apikey
-
-@require_apikey
-
 def readcontent():
 
 	try:
@@ -37,7 +31,6 @@ def readcontent():
 
 @contentsroute.route('/contents/<id>', methods=['GET'])
 @require_apikey
-
 def readonecontent(id):
 
 	try:
@@ -47,9 +40,8 @@ def readonecontent(id):
 		return f"An Error Occurred: {e}"
 
 
-@contentsroute.route('/contents/<id>', methods=['POST', 'PUT'])
+@contentsroute.route('/contents/<id>', methods=['PUT'])
 @require_apikey
-
 def updatecontent(id):
 
 	try:
@@ -62,7 +54,6 @@ def updatecontent(id):
 
 @contentsroute.route('/contents/<id>', methods=['DELETE'])
 @require_apikey
-
 def deletecontent(id):
 
 	try:

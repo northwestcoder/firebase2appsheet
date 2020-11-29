@@ -8,10 +8,8 @@ placesroute = Blueprint('places', __name__)
 
 places = client.db.collection('places')
 
-
 @placesroute.route('/places', methods=['POST'])
 @require_apikey
-
 def createplace():
 
 	try:
@@ -23,7 +21,6 @@ def createplace():
 
 @placesroute.route('/places', methods=['GET'])
 @require_apikey
-
 def readplace():
 
 	try:
@@ -35,7 +32,6 @@ def readplace():
 
 @placesroute.route('/places/<id>', methods=['GET'])
 @require_apikey
-
 def readoneplace(id):
 
 	try:
@@ -45,9 +41,8 @@ def readoneplace(id):
 		return f"An Error Occurred: {e}"
 
 
-@placesroute.route('/places/<id>', methods=['POST', 'PUT'])
+@placesroute.route('/places/<id>', methods=['PUT'])
 @require_apikey
-
 def updateplace(id):
 
 	try:
@@ -60,7 +55,6 @@ def updateplace(id):
 
 @placesroute.route('/places/<id>', methods=['DELETE'])
 @require_apikey
-
 def deleteplace(id):
 
 	try:

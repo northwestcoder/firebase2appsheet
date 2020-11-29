@@ -10,7 +10,6 @@ settings = client.db.collection('settings')
 
 @settingsroute.route('/settings', methods=['GET'])
 @require_apikey
-
 def readsettings():
 
 	try:
@@ -22,7 +21,6 @@ def readsettings():
 
 @settingsroute.route('/settings/<id>', methods=['PUT'])
 @require_apikey
-
 def updateheartbeat(id):
 
 	try:

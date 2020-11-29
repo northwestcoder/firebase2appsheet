@@ -8,10 +8,8 @@ eventsroute = Blueprint('events', __name__)
 
 events = client.db.collection('events')
 
-
 @eventsroute.route('/events', methods=['POST'])
 @require_apikey
-
 def createevent():
 
 	try:
@@ -23,7 +21,6 @@ def createevent():
 
 @eventsroute.route('/events', methods=['GET'])
 @require_apikey
-
 def readevent():
 
 	try:
@@ -35,7 +32,6 @@ def readevent():
 
 @eventsroute.route('/events/<id>', methods=['GET'])
 @require_apikey
-
 def readoneevent(id):
 
 	try:
@@ -45,9 +41,8 @@ def readoneevent(id):
 		return f"An Error Occurred: {e}"
 
 
-@eventsroute.route('/events/<id>', methods=['POST', 'PUT'])
+@eventsroute.route('/events/<id>', methods=['PUT'])
 @require_apikey
-
 def updateevent(id):
 
 	try:
@@ -60,7 +55,6 @@ def updateevent(id):
 
 @eventsroute.route('/events/<id>', methods=['DELETE'])
 @require_apikey
-
 def deleteevent(id):
 
 	try:

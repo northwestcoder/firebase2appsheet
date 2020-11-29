@@ -25,10 +25,11 @@ def heartbeat():
 
 			recordid = id_generator()
 			now = datetime.now()
+			dt_string = now.strftime("%d/%m/%Y %H:%M:%S %p")
 			print(now)
 			try:
 				ping = {'id': recordid, 'Name': 'heartbeat event ' + recordid, 'personid': 'abc123', 'placeid': 'abc123', 
-						'thingid': 'abc123','eventtype' : 'party', 'timestamp' : now, 
+						'thingid': 'abc123','eventtype' : 'party', 'timestamp' : dt_string, 
 						'duration': 3, 'address': '3051 NE 86th St, Seattle WA 98115', 
 						'latlong': '47.680989, -122.303969', 'photo':'', 'barcode': '', 'notes' : ''}
 			

@@ -8,10 +8,8 @@ personsroute = Blueprint('persons', __name__)
 
 persons = client.db.collection('persons')
 
-
 @personsroute.route('/persons', methods=['POST'])
 @require_apikey
-
 def createperson():
 
 	try:
@@ -23,7 +21,6 @@ def createperson():
 
 @personsroute.route('/persons', methods=['GET'])
 @require_apikey
-
 def readperson():
 
 	try:
@@ -35,7 +32,6 @@ def readperson():
 
 @personsroute.route('/persons/<id>', methods=['GET'])
 @require_apikey
-
 def readoneperson(id):
 
 	try:
@@ -45,9 +41,8 @@ def readoneperson(id):
 		return f"An Error Occurred: {e}"
 
 
-@personsroute.route('/persons/<id>', methods=['POST', 'PUT'])
+@personsroute.route('/persons/<id>', methods=['PUT'])
 @require_apikey
-
 def updateperson(id):
 
 	try:
@@ -60,7 +55,6 @@ def updateperson(id):
 
 @personsroute.route('/persons/<id>', methods=['DELETE'])
 @require_apikey
-
 def deleteperson(id):
 
 	try:
