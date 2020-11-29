@@ -652,7 +652,7 @@ components:
     ApiKeyAuth:
       type: apiKey
       in: header
-      name: X-APIKey
+      name: x-api-key
   parameters:
     personIdPath:
       in: path
