@@ -1,5 +1,6 @@
 from flask import Blueprint
 from flask import request, jsonify
+from firebase_admin import firestore
 
 import client
 from apiauth import require_apikey
@@ -14,6 +15,10 @@ def createevent():
 
 	try:
 		id = request.json['id']
+
+		#server side timestamps from firestore, now we don't need this calc in appsheet
+		request.json['timestamp'] = firestore.SERVER_TIMESTAMP
+
 		events.document(id).set(request.json)
 		return jsonify({"success": True}), 200
 	except Exception as e:

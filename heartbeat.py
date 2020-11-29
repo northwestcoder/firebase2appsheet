@@ -20,6 +20,7 @@ def heartbeat():
 	heartbeatstatus = client.db.collection(u'settings').document(u'heartbeat')
 	status = heartbeatstatus.get().to_dict()["value"]
 
+
 	while True:
 		if (status == "ON"):	
 			print("status is ON, we are in heartbeat mode")
