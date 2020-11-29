@@ -41,11 +41,7 @@
 
 ### High Level Steps - Google Appsheet
 
-- in Appsheet.com, create a new Rest API connection ("Apigee") using this endpoint: 
-
-`https://firebase2appsheet-{{randomid}}-uc.a.run.app/oaspec`
-
-using the apikey you configured - you also need to change *randomid* above according to your cloud build URL. For more information on the rest API connector in Appsheet go [here](https://help.appsheet.com/en/articles/4438873-apigee-data-source) 
+- in Appsheet.com, create a new Rest API connection ("Apigee") using this endpoint: `https://firebase2appsheet-{{randomid}}-uc.a.run.app/oaspec` and using the apikey you configured above - you also need to change *randomid* here based upon your cloud build URL. For more information on the rest API connector in Appsheet go [here](https://help.appsheet.com/en/articles/4438873-apigee-data-source) 
 
 - We have also provided a [template app](https://www.appsheet.com/samples/Companion-app-for-a-github-project-See-About--More-Information?appGuidString=4615279d-6ace-4adb-8eda-241bdf692bdc) which is currently using Google Sheets. The premise here is that if you were successful in following all of the instructions above, you can swap out - one by one - each table reference in this template app, from Google Sheets to your newly configured rest API data source.
 
@@ -56,7 +52,7 @@ https://github.com/GoogleContainerTools/kaniko#kaniko---build-images-in-kubernet
 
 - In firebase, we created a simple data model of people, places, things, and events. There is also a special settings table.
 
-- when you fire up this client, it will try to create at least one record for each of these firestore collections:
+- When you fire up this client, it will try to create at least one record for each of these firestore collections:
 
 	- persons
 	- places
