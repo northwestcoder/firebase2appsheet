@@ -7,6 +7,8 @@
 - Access to Google Cloud and a Google cloud project with billing enabled
 - Access to www.appsheet.com - registration is free
 
+- If you have never done this particular pipeline before, we recommend [this tutorial](https://cloud.google.com/community/tutorials/building-flask-api-with-cloud-firestore-and-deploying-to-cloud-run) first.
+
 
 ### High Level Steps
 

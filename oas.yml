@@ -755,7 +755,7 @@ components:
     SettingResponse:
       type: object
       properties:
-        Setting:
+        Settings:
           type: array
           items:
             $ref: '#/components/schemas/Settings'    
@@ -773,7 +773,7 @@ components:
     ContentResponse:
       type: object
       properties:
-        Setting:
+        Content:
           type: array
           items:
             $ref: '#/components/schemas/Content'    
