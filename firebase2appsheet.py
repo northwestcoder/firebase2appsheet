@@ -6,6 +6,7 @@ from flask import Flask, request, jsonify
 import client as client
 from initializer import initialdata
 from heartbeat import heartbeat
+from apiauth import require_apikey
 
 from route_events import eventsroute
 from route_persons import personsroute
@@ -28,6 +29,7 @@ def getoas():
 		return oas
 	except Exception as e:
 		return f"An Error Occurred reading oas spec: {e}"
+		
     
 port = int(os.environ.get('PORT', 8080))
 if __name__ == '__main__':

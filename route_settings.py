@@ -2,12 +2,15 @@ from flask import Blueprint
 from flask import request, jsonify
 
 import client
+from apiauth import require_apikey
 
 settingsroute = Blueprint('things', __name__)
 
 settings = client.db.collection('things')
 
 @settingsroute.route('/settings', methods=['GET'])
+@require_apikey
+
 def readsettings():
 
 	try:
@@ -18,6 +21,8 @@ def readsettings():
 		return f"An Error Occurred: {e}"
 
 @settingsroute.route('/settings/<id>', methods=['PUT'])
+@require_apikey
+
 def updateheartbeat(id):
 
 	try:

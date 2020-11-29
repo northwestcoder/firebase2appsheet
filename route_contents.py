@@ -2,6 +2,7 @@ from flask import Blueprint
 from flask import request, jsonify
 
 import client
+from apiauth import require_apikey
 
 contentsroute = Blueprint('contents', __name__)
 
@@ -9,6 +10,8 @@ contents = client.db.collection('contents')
 
 
 @contentsroute.route('/contents', methods=['POST'])
+@require_apikey
+
 def createcontent():
 
 	try:
@@ -19,6 +22,10 @@ def createcontent():
 		return f"An Error Occurred: {e}"
 
 @contentsroute.route('/contents', methods=['GET'])
+@require_apikey
+
+@require_apikey
+
 def readcontent():
 
 	try:
@@ -29,6 +36,8 @@ def readcontent():
 		return f"An Error Occurred: {e}"
 
 @contentsroute.route('/contents/<id>', methods=['GET'])
+@require_apikey
+
 def readonecontent(id):
 
 	try:
@@ -39,6 +48,8 @@ def readonecontent(id):
 
 
 @contentsroute.route('/contents/<id>', methods=['POST', 'PUT'])
+@require_apikey
+
 def updatecontent(id):
 
 	try:
@@ -50,6 +61,8 @@ def updatecontent(id):
 
 
 @contentsroute.route('/contents/<id>', methods=['DELETE'])
+@require_apikey
+
 def deletecontent(id):
 
 	try:

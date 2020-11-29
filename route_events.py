@@ -2,6 +2,7 @@ from flask import Blueprint
 from flask import request, jsonify
 
 import client
+from apiauth import require_apikey
 
 eventsroute = Blueprint('events', __name__)
 
@@ -9,6 +10,8 @@ events = client.db.collection('events')
 
 
 @eventsroute.route('/events', methods=['POST'])
+@require_apikey
+
 def createevent():
 
 	try:
@@ -19,6 +22,8 @@ def createevent():
 		return f"An Error Occurred: {e}"
 
 @eventsroute.route('/events', methods=['GET'])
+@require_apikey
+
 def readevent():
 
 	try:
@@ -29,6 +34,8 @@ def readevent():
 		return f"An Error Occurred: {e}"
 
 @eventsroute.route('/events/<id>', methods=['GET'])
+@require_apikey
+
 def readoneevent(id):
 
 	try:
@@ -39,6 +46,8 @@ def readoneevent(id):
 
 
 @eventsroute.route('/events/<id>', methods=['POST', 'PUT'])
+@require_apikey
+
 def updateevent(id):
 
 	try:
@@ -50,6 +59,8 @@ def updateevent(id):
 
 
 @eventsroute.route('/events/<id>', methods=['DELETE'])
+@require_apikey
+
 def deleteevent(id):
 
 	try:

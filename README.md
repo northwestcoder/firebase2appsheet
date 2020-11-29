@@ -21,11 +21,17 @@
 `git clone https://github.com/northwestcoder/firebase2appsheet`
 `cd firebase2appsheet`
 
+- create an empty file named *apikey* and make up an api key for later use, e.g. long alphanumerics, e.g.
+
+`echo "mylongapikey-123890sdflkjw45" > apikey` - you will need this below.
+
 - Paste your key.json contents into the empty key.json file provided (we used the Eclipse Theia cloud shell editor for this)
 
 - Run cloud build:
 
 `gcloud builds submit --config cloudbuild.yaml .`
+
+- Cloud run will nicely wrap this python flask server running on http/8080 inside of a SSL instance running on https/443.
 
 - Once build is complete, your endpoint is ready for use by Appsheet (or even postman at this point). Take note of the end point at the very end of the build steps, e.g.
 
