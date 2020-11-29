@@ -8,6 +8,7 @@ import client
 
 def initialdata():
 	now = datetime.now()
+	dt_string = now.strftime("%m/%d/%Y %H:%M:%S")
 
 	personref = client.db.collection('persons').document(u'abc123')
 	personref.set({'id': 'abc123', 'Name': 'placeholder person abc123',  'active' : True, 
@@ -26,7 +27,7 @@ def initialdata():
 
 	eventref = client.db.collection('events').document(u'abc123')
 	eventref.set({'id': 'abc123', 'Name': 'placeholder event abc123', 'personid': 'abc123', 'placeid': 'abc123', 
-				'thingid': 'abc123','eventtype' : 'party', 'timestamp' : now, 
+				'thingid': 'abc123','eventtype' : 'party', 'timestamp' : dt_string, 
 				'duration': 1, 'address': '3051 NE 86th St, Seattle WA 98115', 
 				'latlong': '47.680989, -122.303969', 'photo':'', 'barcode': '0123456789abcdef', 'notes' : 'notes go here'})
 
