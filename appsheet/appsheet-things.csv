@@ -1,0 +1,400 @@
+id,Name,barcode,startdate,enddate,photo,price,supplier
+111110,Soybean Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.89,Acme Supplies
+111120,Oilseed (except Soybean) Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.88,Acme Supplies
+111130,Dry Pea and Bean Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.19,Acme Supplies
+111140,Wheat Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.39,Acme Supplies
+111150,Corn Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.8,Acme Supplies
+111160,Rice Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.38,Acme Supplies
+111191,Oilseed and Grain Combination Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.54,Acme Supplies
+111199,All Other Grain Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.13,Acme Supplies
+111211,Potato Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.85,Acme Supplies
+111219,Other Vegetable (except Potato) and Melon Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.1,Acme Supplies
+111310,Orange Groves,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.06,Acme Supplies
+111320,Citrus (except Orange) Groves,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.43,Acme Supplies
+111331,Apple Orchards,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.03,Acme Supplies
+111332,Grape Vineyards,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.87,Acme Supplies
+111333,Strawberry Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.94,Acme Supplies
+111334,Berry (except Strawberry) Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.87,Acme Supplies
+111335,Tree Nut Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,10,Acme Supplies
+111336,Fruit and Tree Nut Combination Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.2,Acme Supplies
+111339,Other Noncitrus Fruit Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.21,Acme Supplies
+111411,Mushroom Production,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.86,Acme Supplies
+111419,Other Food Crops Grown Under Cover,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.06,Acme Supplies
+111421,Nursery and Tree Production,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.72,Acme Supplies
+111422,Floriculture Production,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.66,Acme Supplies
+111910,Tobacco Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.77,Acme Supplies
+111920,Cotton Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.68,Acme Supplies
+111930,Sugarcane Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.77,Acme Supplies
+111940,Hay Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.04,Acme Supplies
+111991,Sugar Beet Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7,Acme Supplies
+111992,Peanut Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.04,Acme Supplies
+111998,All Other Miscellaneous Crop Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.13,Acme Supplies
+112111,Beef Cattle Ranching and Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.65,Acme Supplies
+112112,Cattle Feedlots,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.58,Acme Supplies
+112120,Dairy Cattle and Milk Production,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.44,Acme Supplies
+112130,Dual-Purpose Cattle Ranching and Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.48,Acme Supplies
+112210,Hog and Pig Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.58,Acme Supplies
+112310,Chicken Egg Production,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.54,Acme Supplies
+112320,Broilers and Other Meat Type Chicken Production,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.64,Acme Supplies
+112330,Turkey Production,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.37,Acme Supplies
+112340,Poultry Hatcheries,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.97,Acme Supplies
+112390,Other Poultry Production,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.8,Acme Supplies
+112410,Sheep Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.28,Acme Supplies
+112420,Goat Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.22,Acme Supplies
+112511,Finfish Farming and Fish Hatcheries,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.95,Acme Supplies
+112512,Shellfish Farming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.41,Acme Supplies
+112519,Other Aquaculture,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.55,Acme Supplies
+112910,Apiculture,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.69,Acme Supplies
+112920,Horses and Other Equine Production,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.73,Acme Supplies
+112930,Fur-Bearing Animal and Rabbit Production,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.12,Acme Supplies
+112990,All Other Animal Production,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.26,Acme Supplies
+113110,Timber Tract Operations,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.56,Acme Supplies
+113210,Forest Nurseries and Gathering of Forest Products,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.31,Acme Supplies
+113310,Logging,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.98,Acme Supplies
+114111,Finfish Fishing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.91,Acme Supplies
+114112,Shellfish Fishing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.06,Acme Supplies
+114119,Other Marine Fishing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.65,Acme Supplies
+114210,Hunting and Trapping,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.18,Acme Supplies
+115111,Cotton Ginning,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.07,Acme Supplies
+115112,"Soil Preparation, Planting, and Cultivating",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.96,Acme Supplies
+115113,"Crop Harvesting, Primarily by Machine",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.27,Acme Supplies
+115114,Postharvest Crop Activities (except Cotton Ginning),0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.84,Acme Supplies
+115115,Farm Labor Contractors and Crew Leaders,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.14,Acme Supplies
+115116,Farm Management Services,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.86,Acme Supplies
+115210,Support Activities for Animal Production,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.91,Acme Supplies
+115310,Support Activities for Forestry,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.3,Acme Supplies
+211120,Crude Petroleum Extraction ,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.05,Acme Supplies
+211130,Natural Gas Extraction,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.9,Acme Supplies
+212111,Bituminous Coal and Lignite Surface Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.79,Acme Supplies
+212112,Bituminous Coal Underground Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.82,Acme Supplies
+212113,Anthracite Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.82,Acme Supplies
+212210,Iron Ore Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.69,Acme Supplies
+212221,Gold Ore Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6,Acme Supplies
+212222,Silver Ore Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.75,Acme Supplies
+212230,"Copper, Nickel, Lead, and Zinc Mining",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.55,Acme Supplies
+212291,Uranium-Radium-Vanadium Ore Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.34,Acme Supplies
+212299,All Other Metal Ore Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.33,Acme Supplies
+212311,Dimension Stone Mining and Quarrying,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.14,Acme Supplies
+212312,Crushed and Broken Limestone Mining and Quarrying,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.86,Acme Supplies
+212313,Crushed and Broken Granite Mining and Quarrying,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.45,Acme Supplies
+212319,Other Crushed and Broken Stone Mining and Quarrying,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.8,Acme Supplies
+212321,Construction Sand and Gravel Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.74,Acme Supplies
+212322,Industrial Sand Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.8,Acme Supplies
+212324,Kaolin and Ball Clay Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.78,Acme Supplies
+212325,Clay and Ceramic and Refractory Minerals Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.56,Acme Supplies
+212391,"Potash, Soda, and Borate Mineral Mining",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.59,Acme Supplies
+212392,Phosphate Rock Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.95,Acme Supplies
+212393,Other Chemical and Fertilizer Mineral Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.67,Acme Supplies
+212399,All Other Nonmetallic Mineral Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.99,Acme Supplies
+213111,Drilling Oil and Gas Wells,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5,Acme Supplies
+213112,Support Activities for Oil and Gas Operations,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.68,Acme Supplies
+213113,Support Activities for Coal Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.95,Acme Supplies
+213114,Support Activities for Metal Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.99,Acme Supplies
+213115,Support Activities for Nonmetallic Minerals (except Fuels) Mining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.38,Acme Supplies
+221111,Hydroelectric Power Generation,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.98,Acme Supplies
+221112,Fossil Fuel Electric Power Generation,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.77,Acme Supplies
+221113,Nuclear Electric Power Generation,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.52,Acme Supplies
+221114,Solar Electric Power Generation,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.9,Acme Supplies
+221115,Wind Electric Power Generation,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.95,Acme Supplies
+221116,Geothermal Electric Power Generation,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.05,Acme Supplies
+221117,Biomass Electric Power Generation,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.21,Acme Supplies
+221118,Other Electric Power Generation,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.98,Acme Supplies
+221121,Electric Bulk Power Transmission and Control,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.1,Acme Supplies
+221122,Electric Power Distribution,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.61,Acme Supplies
+221210,Natural Gas Distribution,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.88,Acme Supplies
+221310,Water Supply and Irrigation Systems,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.41,Acme Supplies
+221320,Sewage Treatment Facilities,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.88,Acme Supplies
+221330,Steam and Air-Conditioning Supply,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.81,Acme Supplies
+236115,New Single-Family Housing Construction (except For-Sale Builders),0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.71,Acme Supplies
+236116,New Multifamily Housing Construction (except For-Sale Builders),0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.04,Acme Supplies
+236117,New Housing For-Sale Builders,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.46,Acme Supplies
+236118,Residential Remodelers,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.45,Acme Supplies
+236210,Industrial Building Construction,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.35,Acme Supplies
+236220,Commercial and Institutional Building Construction,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.05,Acme Supplies
+237110,Water and Sewer Line and Related Structures Construction,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.43,Acme Supplies
+237120,Oil and Gas Pipeline and Related Structures Construction,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.95,Acme Supplies
+237130,Power and Communication Line and Related Structures Construction,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.5,Acme Supplies
+237210,Land Subdivision,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.25,Acme Supplies
+237310,"Highway, Street, and Bridge Construction",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.81,Acme Supplies
+237990,Other Heavy and Civil Engineering Construction,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.38,Acme Supplies
+238110,Poured Concrete Foundation and Structure Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.32,Acme Supplies
+238120,Structural Steel and Precast Concrete Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.12,Acme Supplies
+238130,Framing Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.18,Acme Supplies
+238140,Masonry Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.84,Acme Supplies
+238150,Glass and Glazing Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.97,Acme Supplies
+238160,Roofing Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.7,Acme Supplies
+238170,Siding Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.64,Acme Supplies
+238190,"Other Foundation, Structure, and Building Exterior Contractors",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.67,Acme Supplies
+238210,Electrical Contractors and Other Wiring Installation Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.45,Acme Supplies
+238220,"Plumbing, Heating, and Air-Conditioning Contractors",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.57,Acme Supplies
+238290,Other Building Equipment Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.99,Acme Supplies
+238310,Drywall and Insulation Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.31,Acme Supplies
+238320,Painting and Wall Covering Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.49,Acme Supplies
+238330,Flooring Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.18,Acme Supplies
+238340,Tile and Terrazzo Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.35,Acme Supplies
+238350,Finish Carpentry Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.64,Acme Supplies
+238390,Other Building Finishing Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.48,Acme Supplies
+238910,Site Preparation Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.2,Acme Supplies
+238990,All Other Specialty Trade Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.86,Four Seasons Landscaping
+311111,Dog and Cat Food Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.03,Four Seasons Landscaping
+311119,Other Animal Food Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.1,Four Seasons Landscaping
+311211,Flour Milling,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.39,Four Seasons Landscaping
+311212,Rice Milling,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.71,Four Seasons Landscaping
+311213,Malt Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.18,Four Seasons Landscaping
+311221,Wet Corn Milling,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.6,Four Seasons Landscaping
+311224,Soybean and Other Oilseed Processing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.36,Four Seasons Landscaping
+311225,Fats and Oils Refining and Blending,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.43,Four Seasons Landscaping
+311230,Breakfast Cereal Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.83,Four Seasons Landscaping
+311313,Beet Sugar Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.03,Four Seasons Landscaping
+311314,Cane Sugar Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.07,Four Seasons Landscaping
+311340,Nonchocolate Confectionery Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.68,Four Seasons Landscaping
+311351,Chocolate and Confectionery Manufacturing from Cacao Beans,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.58,Four Seasons Landscaping
+311352,Confectionery Manufacturing from Purchased Chocolate,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.81,Four Seasons Landscaping
+311411,"Frozen Fruit, Juice, and Vegetable Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.13,Four Seasons Landscaping
+311412,Frozen Specialty Food Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.3,Four Seasons Landscaping
+311421,Fruit and Vegetable Canning,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.91,Four Seasons Landscaping
+311422,Specialty Canning,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.74,Four Seasons Landscaping
+311423,Dried and Dehydrated Food Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.39,Four Seasons Landscaping
+311511,Fluid Milk Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.28,Four Seasons Landscaping
+311512,Creamery Butter Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.85,Four Seasons Landscaping
+311513,Cheese Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.93,Four Seasons Landscaping
+311514,"Dry, Condensed, and Evaporated Dairy Product Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.6,Four Seasons Landscaping
+311520,Ice Cream and Frozen Dessert Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.01,Four Seasons Landscaping
+311611,Animal (except Poultry) Slaughtering,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.84,Four Seasons Landscaping
+311612,Meat Processed from Carcasses,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.23,Four Seasons Landscaping
+311613,Rendering and Meat Byproduct Processing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.33,Four Seasons Landscaping
+311615,Poultry Processing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.97,Four Seasons Landscaping
+311710,Seafood Product Preparation and Packaging,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.28,Four Seasons Landscaping
+311811,Retail Bakeries,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.74,Four Seasons Landscaping
+311812,Commercial Bakeries,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.99,Four Seasons Landscaping
+311813,"Frozen Cakes, Pies, and Other Pastries Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.31,Four Seasons Landscaping
+311821,Cookie and Cracker Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.74,Four Seasons Landscaping
+311824,"Dry Pasta, Dough, and Flour Mixes Manufacturing from Purchased Flour",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.29,Four Seasons Landscaping
+311830,Tortilla Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.73,Four Seasons Landscaping
+311911,Roasted Nuts and Peanut Butter Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.88,Four Seasons Landscaping
+311919,Other Snack Food Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.02,Four Seasons Landscaping
+311920,Coffee and Tea Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.82,Four Seasons Landscaping
+311930,Flavoring Syrup and Concentrate Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.43,Four Seasons Landscaping
+311941,"Mayonnaise, Dressing, and Other Prepared Sauce Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.99,Four Seasons Landscaping
+311942,Spice and Extract Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.08,Four Seasons Landscaping
+311991,Perishable Prepared Food Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.22,Four Seasons Landscaping
+311999,All Other Miscellaneous Food Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.16,Four Seasons Landscaping
+312111,Soft Drink Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.93,Four Seasons Landscaping
+312112,Bottled Water Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.13,Four Seasons Landscaping
+312113,Ice Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.9,Four Seasons Landscaping
+312120,Breweries,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.82,Four Seasons Landscaping
+312130,Wineries,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.69,Four Seasons Landscaping
+312140,Distilleries,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.99,Four Seasons Landscaping
+312230,Tobacco Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.19,Four Seasons Landscaping
+313110,"Fiber, Yarn, and Thread Mills",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.1,Four Seasons Landscaping
+313210,Broadwoven Fabric Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.4,Four Seasons Landscaping
+313220,Narrow Fabric Mills and Schiffli Machine Embroidery,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.12,Four Seasons Landscaping
+313230,Nonwoven Fabric Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.65,Four Seasons Landscaping
+313240,Knit Fabric Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.1,Four Seasons Landscaping
+313310,Textile and Fabric Finishing Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.22,Four Seasons Landscaping
+313320,Fabric Coating Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.98,Four Seasons Landscaping
+314110,Carpet and Rug Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.01,Four Seasons Landscaping
+314120,Curtain and Linen Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.71,Four Seasons Landscaping
+314910,Textile Bag and Canvas Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.74,Four Seasons Landscaping
+314994,"Rope, Cordage, Twine, Tire Cord, and Tire Fabric Mills",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4,Four Seasons Landscaping
+314999,All Other Miscellaneous Textile Product Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.51,Four Seasons Landscaping
+315110,Hosiery and Sock Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.68,Four Seasons Landscaping
+315190,Other Apparel Knitting Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.29,Four Seasons Landscaping
+315210,Cut and Sew Apparel Contractors,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.53,Four Seasons Landscaping
+315220,Men’s and Boys’ Cut and Sew Apparel Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.36,Four Seasons Landscaping
+315240,"Women’s, Girls’, and Infants’ Cut and Sew Apparel Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.5,Four Seasons Landscaping
+315280,Other Cut and Sew Apparel Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.54,Four Seasons Landscaping
+315990,Apparel Accessories and Other Apparel Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.41,Four Seasons Landscaping
+316110,Leather and Hide Tanning and Finishing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.77,Four Seasons Landscaping
+316210,Footwear Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.09,Four Seasons Landscaping
+316992,Women's Handbag and Purse Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.81,Four Seasons Landscaping
+316998,All Other Leather Good and Allied Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.92,Four Seasons Landscaping
+321113,Sawmills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.5,Four Seasons Landscaping
+321114,Wood Preservation,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.42,Four Seasons Landscaping
+321211,Hardwood Veneer and Plywood Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.98,Four Seasons Landscaping
+321212,Softwood Veneer and Plywood Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.42,Four Seasons Landscaping
+321213,Engineered Wood Member (except Truss) Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.13,Four Seasons Landscaping
+321214,Truss Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.92,Four Seasons Landscaping
+321219,Reconstituted Wood Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.16,Four Seasons Landscaping
+321911,Wood Window and Door Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.14,Four Seasons Landscaping
+321912,"Cut Stock, Resawing Lumber, and Planing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.12,Four Seasons Landscaping
+321918,Other Millwork (including Flooring),0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.31,Four Seasons Landscaping
+321920,Wood Container and Pallet Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.26,Four Seasons Landscaping
+321991,Manufactured Home (Mobile Home) Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.86,Beetlejuice Enterprises
+321992,Prefabricated Wood Building Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.31,Beetlejuice Enterprises
+321999,All Other Miscellaneous Wood Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.66,Beetlejuice Enterprises
+322110,Pulp Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.99,Beetlejuice Enterprises
+322121,Paper (except Newsprint) Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.02,Beetlejuice Enterprises
+322122,Newsprint Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.67,Beetlejuice Enterprises
+322130,Paperboard Mills,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.83,Beetlejuice Enterprises
+322211,Corrugated and Solid Fiber Box Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.81,Beetlejuice Enterprises
+322212,Folding Paperboard Box Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.46,Beetlejuice Enterprises
+322219,Other Paperboard Container Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.57,Beetlejuice Enterprises
+322220,Paper Bag and Coated and Treated Paper Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.09,Beetlejuice Enterprises
+322230,Stationery Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.42,Beetlejuice Enterprises
+322291,Sanitary Paper Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.67,Beetlejuice Enterprises
+322299,All Other Converted Paper Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.55,Beetlejuice Enterprises
+323111,Commercial Printing (except Screen and Books),0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.02,Beetlejuice Enterprises
+323113,Commercial Screen Printing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.08,Beetlejuice Enterprises
+323117,Books Printing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.08,Beetlejuice Enterprises
+323120,Support Activities for Printing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.23,Beetlejuice Enterprises
+324110,Petroleum Refineries,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.26,Beetlejuice Enterprises
+324121,Asphalt Paving Mixture and Block Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.92,Beetlejuice Enterprises
+324122,Asphalt Shingle and Coating Materials Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.93,Beetlejuice Enterprises
+324191,Petroleum Lubricating Oil and Grease Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.98,Beetlejuice Enterprises
+324199,All Other Petroleum and Coal Products Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.48,Beetlejuice Enterprises
+325110,Petrochemical Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.47,Beetlejuice Enterprises
+325120,Industrial Gas Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.76,Beetlejuice Enterprises
+325130,Synthetic Dye and Pigment Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.31,Beetlejuice Enterprises
+325180,Other Basic Inorganic Chemical Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.14,Beetlejuice Enterprises
+325193,Ethyl Alcohol Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.05,Beetlejuice Enterprises
+325194,"Cyclic Crude, Intermediate, and Gum and Wood Chemical Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.54,Beetlejuice Enterprises
+325199,All Other Basic Organic Chemical Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.23,Beetlejuice Enterprises
+325211,Plastics Material and Resin Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.43,Beetlejuice Enterprises
+325212,Synthetic Rubber Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.59,Beetlejuice Enterprises
+325220,Artificial and Synthetic Fibers and Filaments Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.53,Beetlejuice Enterprises
+325311,Nitrogenous Fertilizer Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.21,Beetlejuice Enterprises
+325312,Phosphatic Fertilizer Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.56,Beetlejuice Enterprises
+325314,Fertilizer (Mixing Only) Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.81,Beetlejuice Enterprises
+325320,Pesticide and Other Agricultural Chemical Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.1,Beetlejuice Enterprises
+325411,Medicinal and Botanical Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.77,Beetlejuice Enterprises
+325412,Pharmaceutical Preparation Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.45,Beetlejuice Enterprises
+325413,In-Vitro Diagnostic Substance Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.93,Beetlejuice Enterprises
+325414,Biological Product (except Diagnostic) Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.06,Beetlejuice Enterprises
+325510,Paint and Coating Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.89,Beetlejuice Enterprises
+325520,Adhesive Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.14,Beetlejuice Enterprises
+325611,Soap and Other Detergent Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.44,Beetlejuice Enterprises
+325612,Polish and Other Sanitation Good Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.02,Beetlejuice Enterprises
+325613,Surface Active Agent Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.34,Beetlejuice Enterprises
+325620,Toilet Preparation Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.59,Beetlejuice Enterprises
+325910,Printing Ink Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.6,Beetlejuice Enterprises
+325920,Explosives Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.63,Beetlejuice Enterprises
+325991,Custom Compounding of Purchased Resins,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.82,Beetlejuice Enterprises
+325992,"Photographic Film, Paper, Plate, and Chemical Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.15,Beetlejuice Enterprises
+325998,All Other Miscellaneous Chemical Product and Preparation Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.84,Beetlejuice Enterprises
+326111,Plastics Bag and Pouch Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.12,Beetlejuice Enterprises
+326112,Plastics Packaging Film and Sheet (including Laminated) Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.08,Beetlejuice Enterprises
+326113,Unlaminated Plastics Film and Sheet (except Packaging) Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.9,Beetlejuice Enterprises
+326121,Unlaminated Plastics Profile Shape Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.69,Beetlejuice Enterprises
+326122,Plastics Pipe and Pipe Fitting Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.03,Beetlejuice Enterprises
+326130,"Laminated Plastics Plate, Sheet (except Packaging), and Shape Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.96,Beetlejuice Enterprises
+326140,Polystyrene Foam Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.42,Beetlejuice Enterprises
+326150,Urethane and Other Foam Product (except Polystyrene) Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.92,Beetlejuice Enterprises
+326160,Plastics Bottle Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.62,Beetlejuice Enterprises
+326191,Plastics Plumbing Fixture Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.32,Beetlejuice Enterprises
+326199,All Other Plastics Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.03,Beetlejuice Enterprises
+326211,Tire Manufacturing (except Retreading),0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.58,Beetlejuice Enterprises
+326212,Tire Retreading,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.32,Beetlejuice Enterprises
+326220,Rubber and Plastics Hoses and Belting Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.37,Beetlejuice Enterprises
+326291,Rubber Product Manufacturing for Mechanical Use,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.01,Beetlejuice Enterprises
+326299,All Other Rubber Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.54,Beetlejuice Enterprises
+327110,"Pottery, Ceramics, and Plumbing Fixture Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.46,Beetlejuice Enterprises
+327120,Clay Building Material and Refractories Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.35,Beetlejuice Enterprises
+327211,Flat Glass Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.09,Beetlejuice Enterprises
+327212,Other Pressed and Blown Glass and Glassware Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.02,Beetlejuice Enterprises
+327213,Glass Container Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.61,Beetlejuice Enterprises
+327215,Glass Product Manufacturing Made of Purchased Glass,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.2,Beetlejuice Enterprises
+327310,Cement Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.17,Beetlejuice Enterprises
+327320,Ready-Mix Concrete Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.97,Beetlejuice Enterprises
+327331,Concrete Block and Brick Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.42,Beetlejuice Enterprises
+327332,Concrete Pipe Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.71,Beetlejuice Enterprises
+327390,Other Concrete Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.92,Beetlejuice Enterprises
+327410,Lime Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.89,Beetlejuice Enterprises
+327420,Gypsum Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.33,Beetlejuice Enterprises
+327910,Abrasive Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.2,Beetlejuice Enterprises
+327991,Cut Stone and Stone Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.62,Beetlejuice Enterprises
+327992,Ground or Treated Mineral and Earth Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.9,Beetlejuice Enterprises
+327993,Mineral Wool Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.33,Beetlejuice Enterprises
+327999,All Other Miscellaneous Nonmetallic Mineral Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.5,Beetlejuice Enterprises
+331110,Iron and Steel Mills and Ferroalloy Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.7,Beetlejuice Enterprises
+331210,Iron and Steel Pipe and Tube Manufacturing from Purchased Steel,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.13,Beetlejuice Enterprises
+331221,Rolled Steel Shape Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.51,Beetlejuice Enterprises
+331222,Steel Wire Drawing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.95,Beetlejuice Enterprises
+331313,Alumina Refining and Primary Aluminum Production,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.42,Beetlejuice Enterprises
+331314,Secondary Smelting and Alloying of Aluminum,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.48,Beetlejuice Enterprises
+331315,"Aluminum Sheet, Plate, and Foil Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.48,Beetlejuice Enterprises
+331318,"Other Aluminum Rolling, Drawing, and Extruding",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.7,Beetlejuice Enterprises
+331410,Nonferrous Metal (except Aluminum) Smelting and Refining,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.4,Beetlejuice Enterprises
+331420,"Copper Rolling, Drawing, Extruding, and Alloying",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.04,Beetlejuice Enterprises
+331491,"Nonferrous Metal (except Copper and Aluminum) Rolling, Drawing, and Extruding",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.08,Beetlejuice Enterprises
+331492,"Secondary Smelting, Refining, and Alloying of Nonferrous Metal (except Copper and Aluminum)",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.62,Beetlejuice Enterprises
+331511,Iron Foundries,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.75,Beetlejuice Enterprises
+331512,Steel Investment Foundries,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.91,Beetlejuice Enterprises
+331513,Steel Foundries (except Investment),0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.91,Beetlejuice Enterprises
+331523,Nonferrous Metal Die-Casting Foundries,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.96,Beetlejuice Enterprises
+331524,Aluminum Foundries (except Die-Casting),0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.47,Beetlejuice Enterprises
+331529,Other Nonferrous Metal Foundries (except Die-Casting),0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.9,Beetlejuice Enterprises
+332111,Iron and Steel Forging,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.38,Beetlejuice Enterprises
+332112,Nonferrous Forging,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.73,Beetlejuice Enterprises
+332114,Custom Roll Forming,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.59,Beetlejuice Enterprises
+332117,Powder Metallurgy Part Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.6,Beetlejuice Enterprises
+332119,"Metal Crown, Closure, and Other Metal Stamping (except Automotive)",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.15,Beetlejuice Enterprises
+332215,"Metal Kitchen Cookware, Utensil, Cutlery, and Flatware (except Precious) Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.74,Beetlejuice Enterprises
+332216,Saw Blade and Handtool Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.84,Beetlejuice Enterprises
+332311,Prefabricated Metal Building and Component Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.88,Beetlejuice Enterprises
+332312,Fabricated Structural Metal Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.18,Beetlejuice Enterprises
+332313,Plate Work Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.27,Beetlejuice Enterprises
+332321,Metal Window and Door Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.98,Beetlejuice Enterprises
+332322,Sheet Metal Work Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.88,Beetlejuice Enterprises
+332323,Ornamental and Architectural Metal Work Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.75,Beetlejuice Enterprises
+332410,Power Boiler and Heat Exchanger Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.18,Beetlejuice Enterprises
+332420,Metal Tank (Heavy Gauge) Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.07,Beetlejuice Enterprises
+332431,Metal Can Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.44,Beetlejuice Enterprises
+332439,Other Metal Container Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.01,Beetlejuice Enterprises
+332510,Hardware Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.4,Beetlejuice Enterprises
+332613,Spring Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.31,Beetlejuice Enterprises
+332618,Other Fabricated Wire Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.74,Beetlejuice Enterprises
+332710,Machine Shops,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.53,Beetlejuice Enterprises
+332721,Precision Turned Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.92,Beetlejuice Enterprises
+332722,"Bolt, Nut, Screw, Rivet, and Washer Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.34,Beetlejuice Enterprises
+332811,Metal Heat Treating,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.86,Beetlejuice Enterprises
+332812,"Metal Coating, Engraving (except Jewelry and Silverware), and Allied Services to Manufacturers",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.54,Beetlejuice Enterprises
+332813,"Electroplating, Plating, Polishing, Anodizing, and Coloring",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.15,Beetlejuice Enterprises
+332911,Industrial Valve Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.88,Beetlejuice Enterprises
+332912,Fluid Power Valve and Hose Fitting Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.19,Beetlejuice Enterprises
+332913,Plumbing Fixture Fitting and Trim Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.52,Beetlejuice Enterprises
+332919,Other Metal Valve and Pipe Fitting Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.86,Beetlejuice Enterprises
+332991,Ball and Roller Bearing Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.46,Beetlejuice Enterprises
+332992,Small Arms Ammunition Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.33,Beetlejuice Enterprises
+332993,Ammunition (except Small Arms) Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.32,Beetlejuice Enterprises
+332994,"Small Arms, Ordnance, and Ordnance Accessories Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.27,Beetlejuice Enterprises
+332996,Fabricated Pipe and Pipe Fitting Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.81,Beetlejuice Enterprises
+332999,All Other Miscellaneous Fabricated Metal Product Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.13,Beetlejuice Enterprises
+333111,Farm Machinery and Equipment Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.75,Beetlejuice Enterprises
+333112,Lawn and Garden Tractor and Home Lawn and Garden Equipment Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.42,Beetlejuice Enterprises
+333120,Construction Machinery Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.14,Beetlejuice Enterprises
+333131,Mining Machinery and Equipment Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.11,Beetlejuice Enterprises
+333132,Oil and Gas Field Machinery and Equipment Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.22,Beetlejuice Enterprises
+333241,Food Product Machinery Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.93,Beetlejuice Enterprises
+333242,Semiconductor Machinery Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.89,Beetlejuice Enterprises
+333243,"Sawmill, Woodworking, and Paper Machinery Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.84,Beetlejuice Enterprises
+333244,Printing Machinery and Equipment Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.81,Beetlejuice Enterprises
+333249,Other Industrial Machinery Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.82,Beetlejuice Enterprises
+333314,Optical Instrument and Lens Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.34,Beetlejuice Enterprises
+333316,Photographic and Photocopying Equipment Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,3.56,Beetlejuice Enterprises
+333318,Other Commercial and Service Industry Machinery Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,4.26,Beetlejuice Enterprises
+333413,Industrial and Commercial Fan and Blower and Air Purification Equipment Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.83,Beetlejuice Enterprises
+333414,Heating Equipment (except Warm Air Furnaces) Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.74,Beetlejuice Enterprises
+333415,Air-Conditioning and Warm Air Heating Equipment and Commercial and Industrial Refrigeration Equipment Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.47,Beetlejuice Enterprises
+333511,Industrial Mold Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.43,Beetlejuice Enterprises
+333514,"Special Die and Tool, Die Set, Jig, and Fixture Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.67,Beetlejuice Enterprises
+333515,Cutting Tool and Machine Tool Accessory Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.22,Beetlejuice Enterprises
+333517,Machine Tool Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.72,Beetlejuice Enterprises
+333519,Rolling Mill and Other Metalworking Machinery Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.7,Beetlejuice Enterprises
+333611,Turbine and Turbine Generator Set Units Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.18,Beetlejuice Enterprises
+333612,"Speed Changer, Industrial High-Speed Drive, and Gear Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.89,Beetlejuice Enterprises
+333613,Mechanical Power Transmission Equipment Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.28,Beetlejuice Enterprises
+333618,Other Engine Equipment Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.54,Beetlejuice Enterprises
+333912,Air and Gas Compressor Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.57,Beetlejuice Enterprises
+333914,"Measuring, Dispensing, and Other Pumping Equipment Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,2.15,Beetlejuice Enterprises
+333921,Elevator and Moving Stairway Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.26,Beetlejuice Enterprises
+333922,Conveyor and Conveying Equipment Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.57,Beetlejuice Enterprises
+333923,"Overhead Traveling Crane, Hoist, and Monorail System Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.44,Beetlejuice Enterprises
+333924,"Industrial Truck, Tractor, Trailer, and Stacker Machinery Manufacturing",0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,8.33,Beetlejuice Enterprises
+333991,Power-Driven Handtool Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.2,Beetlejuice Enterprises
+333992,Welding and Soldering Equipment Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,5.98,Beetlejuice Enterprises
+333993,Packaging Machinery Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,1.68,Beetlejuice Enterprises
+333994,Industrial Process Furnace and Oven Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,9.82,Beetlejuice Enterprises
+333995,Fluid Power Cylinder and Actuator Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,7.68,Beetlejuice Enterprises
+333996,Fluid Power Pump and Motor Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.07,Beetlejuice Enterprises
+333997,Scale and Balance Manufacturing,0123456789abcdef,4/4/2020 12:00:00 AM,12/4/2021 12:00:00 AM,,6.76,Beetlejuice Enterprises
