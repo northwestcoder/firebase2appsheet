@@ -47,8 +47,7 @@
 
 ### Background
 
-- We use Kaniko build images, check it out here:
-https://github.com/GoogleContainerTools/kaniko#kaniko---build-images-in-kubernetes
+- We use Kaniko build images, check it out [here](https://github.com/GoogleContainerTools/kaniko#kaniko---build-images-in-kubernetes)
 
 - In firebase, we created a simple data model of people, places, things, and events. There is also a special settings table.
 
