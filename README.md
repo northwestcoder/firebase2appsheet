@@ -11,7 +11,10 @@
 
 ### Run it standalone
 
-- If for whatever reason, you want to run this flask server on your local machine, here are the quick notes: a) it's python 3, b) we make no assumptions about virtual envs or module support, c) it's pretty straightforward and should work if you are familar with python. d) you will need to place your key.json file from Google IAM in the "misc" directory of this project.
+- If for whatever reason, you want to run this flask server on your local machine, here are the quick notes:
+	- it's python 3, b) we make no assumptions about virtual envs or module support
+	- it's pretty straightforward and should work if you are familar with python.
+	- you will need to paste in your key.json file from Google IAM into "misc/key.json" of this project.
 
 - The default for this exampel is to run on localhost:8080 and the oas.yml refers to this URL. In a later step below, after we deploy to cloud run, we will run a curl command to "init" the instance as well as change the OAS server url to match our new cloud run hostname.
 
