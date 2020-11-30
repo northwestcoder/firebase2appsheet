@@ -4,13 +4,13 @@
 
 ### Overview
 
-- Google Firestore is a fast, realtime nosql data store which also includes numerous API clients and entry points.
+- [Google Firestore](https://firebase.google.com/docs/firestore) is a fast, realtime nosql data store which also includes numerous API clients and entry points.
 
-- Flask is an python, open-source web routing package that can handle all kinds of neat API scenarios.
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/) is an python, open-source web routing package that can handle all kinds of neat API scenarios.
 
-- Google Appsheet.com is a SaaS platform for no-code mobile applications
+- Google [Appsheet.com](https://www.appsheet.com) is a SaaS platform for no-code mobile applications.
 
-- Google Cloud Run creates production-grade containerized servers from your configured source code.
+- [Google Cloud Run](https://cloud.google.com/run) creates production-grade containerized servers from your configured source code.
 
 *This demo/solution combines all four of these elements.*
 

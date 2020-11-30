@@ -14,16 +14,19 @@ def initialdata():
     personref = client.db.collection('persons').document(u'abc123')
     personref.set({'id': 'abc123', 'Name': 'placeholder person abc123',  'active' : True, 
                 'birthdate': '1970-04-04','email' : 'nobody@example.com', 'mobile' : '555-555-5555', 
-                'photo': '', 'teams': 'Alpha Team , Bravo Team', 
+                'photo': 'https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Cloud_Covered.png', 
+                'teams': 'Alpha Team , Bravo Team', 
                 'tenure': 25})
 
     placeref = client.db.collection('places').document(u'abc123')
     placeref.set({'id': 'abc123', 'Name': 'placeholder place abc123',  'address' : '7200 Aurora Ave N, Seattle, WA 98103', 
-                'latlong': '47.680584, -122.346198','mainline' : '555-555-5555', 'photo' : ''})
+                'latlong': '47.680584, -122.346198','mainline' : '555-555-5555', 
+                'photo' : 'https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Cloud_Covered.png'})
 
     thingref = client.db.collection('things').document(u'abc123')
     thingref.set({'id': 'abc123', 'Name': 'placeholder thing abc123',  'barcode' : '0123456789abcdef', 
-                'startdate': '4/4/2020 12:00:00 AM','enddate' : '12/4/2021 12:00:00 AM', 'photo' : '', 'price' : 27.99, 
+                'startdate': '4/4/2020 12:00:00 AM','enddate' : '12/4/2021 12:00:00 AM', 
+                'photo' : 'https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Cloud_Covered.png', 'price' : 27.99, 
                 'supplier' : 'Acme Supplies'})
 
     eventref = client.db.collection('events').document(u'abc123')
