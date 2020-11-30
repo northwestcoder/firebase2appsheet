@@ -78,6 +78,12 @@ So, for example, your curl command might look like:
 
 - Another route you can take at this point is to use the three provided CSV files in the ./appsheet directory. These are meant to be uploaded *through your appsheet app, and from there will be loaded into firebase*.
 
+- Note that we are not storing any images in Firestore directly. Instead, when you first logged into Appsheet, you chose Google Auth or Microsoft Auth, and we are using those respective storage platforms for any uploaded images.
+
+- You can also download the Appsheet app from the Apple or Google store and run this app on your smartphone. 
+
+- If you have everything working, you can now go back into Firestore admin console, open up the project you created, select "Firestore" and then watch the screen while you use the mobile app. Any changes you make should flash/highlight in the Firestore console. **Congrats!**
+
 ### Background
 
 - We use Kaniko build images, check it out [here](https://github.com/GoogleContainerTools/kaniko#kaniko---build-images-in-kubernetes).
@@ -111,7 +117,16 @@ So, for example, your curl command might look like:
 
 ### How to productionize this Flask server
 
-- 
+- We recommend removing all of the heartbeat code - that's just for demo purposes.
+
+- Ditto for the initialization endpoint ("/init") - this is also just for demo purposes.
+
+- We recommend splitting out the oas.yml file *away from* the containerized server.
+
+- You can increase the memory footprint and change other settings of the containerized Cloud Run instance. Learn more [here](https://cloud.google.com/run/docs/configuring/memory-limits).
+
+- For security: for this demo we baked in a file system "apikey" file. Since the goal for this solution is to act as a front end to Appsheet, and since you will be using Appsheet security and authentication in production, it's reasonable to leave this "apikey" solution in place. There are other possibilities here, such as adding python code to read from a google cloud secret, or similar steps.
+
 
 
 
