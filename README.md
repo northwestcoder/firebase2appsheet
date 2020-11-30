@@ -66,6 +66,9 @@ So, for example, your curl command might look like:
 
 	- What we are doing above is performing a special one-time POST to our new cloud run instance - which is now dockerized and has a new shiny cloud run url - and using a special endpoint "init" we are then telling it to update its own built-in oas.yml file. This is a strong anti-pattern in a production env but fine for demo purposes.
 
+- OK one more setting to change: Edit the Cloud Run instance by clicking into it, and then clicking "EDIT & DEPLOY NEW VERSION"
+	- In this screen, you need to set minimum instance to 1, and maximum to 3 (or a deliberately low value as we are just testing).
+	- By setting minimum to 1, we are in theory forcing a long-lived and long-running instance, so that our OAS spec yaml file will remain the same.
 
 ### High Level Steps - Google Appsheet
 
