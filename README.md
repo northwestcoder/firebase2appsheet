@@ -89,7 +89,7 @@ So, for example, your curl command might look like:
 
 - Because this example assumes you are connecting with www.appsheet.com, there are thus all kinds of complications that we nicely avoid around oAuth, advanced OpenAPI Spec concepts, nested JSON in firestore, etc, etc.. Appsheet assumes that each firebase collection is a top-level "table" whose documents (children) are all *indentical in structure*. Because of this simplicity, there's a bunch of code-worrying that does *not* have to happen here.
 
-- There's also a secret "heartbeat" setting which defaults to OFF. If ON, the cloud run instance will create Firestore data once every five seconds. If OFF, the heartbeat checks every five minutes to see if someone has turned on the setting. Enabling this is left as a fun challenge for the reader. :)
+- There's also a secret "heartbeat" setting which defaults to OFF. If set to ON, after 0-5 minutes, the cloud run instance will begin creating Firestore data once every five seconds until it sees that heartbeat is set to OFF. If OFF, the heartbeat checks Firestore every five minutes to see if someone has turned on the setting. Enabling this is left as an exercise for the reader. :)
 
 ### How to add your own tables
 
@@ -102,6 +102,10 @@ So, for example, your curl command might look like:
 	- You'll need to modify firebase2appsheet.py to reference your new route_*.py file.
 	- You'll want to create an empty collection in Firebase for your data.
 	- We might have missed something - please let us know!
+
+### How to productionize this Flask server
+
+- 
 
 
 
