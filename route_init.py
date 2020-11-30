@@ -70,7 +70,7 @@ def initializedata():
 		initdata = initialdata()
 		
 		if newcloudrunurl is not None:
-			replaceOAS_URL('misc/oas.yml','http://localhost:8080','https://'+newcloudrunurl)
+			replaceOAS_URL('misc/oas.yml','http://localhost:8080',newcloudrunurl)
 
 		return jsonify({"success initializing this demo": True}), 200
 
@@ -78,3 +78,5 @@ def initializedata():
 	except Exception as e:
 		return f"An Error Occurred creating new initial data: {e}"
 
+
+test = initialdata()

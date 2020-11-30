@@ -37,36 +37,40 @@
 
 - Run the following command to create a file named *apikey* in our misc directory and make up a new api key for later use, e.g. some long alphanumerics of your choosing. You will need this in a future step below. Storing api keys in a container like this is fragile and should only be used for testing.
 
-`echo -n "changethis_mylongapikey-123890sdflkjw45" > misc/apikey`
+`echo -n "mylongapikey123890sdflkjw45" > misc/apikey`
 
-- Paste your key.json contents into the empty misc/key.json file provided (we used the Eclipse Theia cloud shell editor for this). Same comment as previous step regarding fragility.
+- *Important: Paste your key.json contents into the empty misc/key.json file provided*. The next step will fail otherwise. We used the Eclipse Theia cloud shell editor for this step. Same comment as previous step regarding fragility.
 
 - Run cloud build:
 
 `gcloud builds submit --config cloudbuild.yaml .`
 
-- Cloud run will nicely wrap this python flask server running on http/8080 into a new containerized instance running on https/443.
+- This will take a few minutes. Cloud run will nicely wrap this python flask server running on http/8080 into a new containerized instance running on https/443.
 
 - Once build is complete, your endpoint is *almost ready* for use by Appsheet (or even postman at this point). Take note of the end point at the very end of the build steps, e.g. it will look something like *https://firebase2appsheet-abcdefe123-uc.a.run.app*. This is our YOURNEW_CLOUDRUN_URL url that we will use below. Also take note of the API key value you created above. 
 
-- At the cloud shell prompt, change YOURNEW_CLOUDRUN_URL to your new url and then run. This will a) initialize firestore with some default data, and b) modify the oas.yml file, updating the URL reference on line 7 of that file.
+- At the cloud shell prompt, change YOURNEW_CLOUDRUN_URL to your new url and then run. This will a) initialize firestore with some default data, and b) modify the oas.yml file, updating the URL reference on line 7 of that file. Notice that you need to substitute your new cloud run URL *twice* in the following command.
 
-`curl -X POST --header "x-apikey: APIKEYFROMABOVESTEP" "https://NEW_CLOUDRUN_URL/init?oas=YOURNEW_CLOUDRUN_URL"`
+`curl -X POST --header "x-apikey: APIKEYFROMABOVESTEP" "YOUNEW_CLOUDRUN_URL/init?oas=YOURNEW_CLOUDRUN_URL"`
 
-- If you are an OpenAPI expert, you are now noticing that this is a brittle way to manage openapi specs. But from a demo perspective or single-deployment perspective, we're ok for now. What we are doing is performing a post to our new cloud run instance - which is now dockerized and has a new shiny cloud run url - and using a special endpoint "init", we are telling it to update its own built-in oas.yml file. This is a strong anti-pattern in a production env but fine for demo purposes.
+So, for example, your curl command might look like:
 
+*curl -X POST --header "x-apikey: mylongapikey123890sdflkjw45" "https://firebase2appsheet-hb3soq
+3q-uc.a.run.app/init?oas=https://firebase2appsheet-hb3soq3q-uc.a.run.app"*
+
+- If you are an OpenAPI expert, you might now notice that storing our oas.yml inside the server container which is running the endpoints is a brittle way to manage openapi specs. But from a demo perspective or single-deployment perspective, we're ok :) What we are doing is performing a post to our new cloud run instance - which is now dockerized and has a new shiny cloud run url - and using a special endpoint "init" we are telling it to update its own built-in oas.yml file. This is a strong anti-pattern in a production env but fine for demo purposes.
 
 ### High Level Steps - Google Appsheet
 
-- in Appsheet.com, create a new Rest API connection ("Apigee") using this endpoint: `https://YOURNEW_CLOUDRUN_URL/oaspec` and using the apikey you configured above - you also need to change *randomid* here based upon your cloud build URL. For more information on the rest API connector in Appsheet go [here](https://help.appsheet.com/en/articles/4438873-apigee-data-source) 
+- Go to www.appsheet.com and create a new Rest API connection ("Apigee") using this endpoint: `https://YOURNEW_CLOUDRUN_URL/oaspec` and using the apikey you configured above - for more information on the rest API connector in Appsheet go [here](https://help.appsheet.com/en/articles/4438873-apigee-data-source).
 
-- We have also provided a [template app](https://www.appsheet.com/samples/Companion-app-for-a-github-project-See-About--More-Information?appGuidString=4615279d-6ace-4adb-8eda-241bdf692bdc) which is currently using Google Sheets. The premise here is that if you were successful in following all of the instructions above, you can swap out - one by one - each table reference in this template app, from Google Sheets to your newly configured rest API data source.
+- We have also provided a [template app](https://www.appsheet.com/samples/Companion-app-for-a-github-project-See-About--More-Information?appGuidString=4615279d-6ace-4adb-8eda-241bdf692bdc) which is currently using Google Sheets. The premise here is that if you were successful in following all of the instructions above, you can swap out - one by one - each table reference in this template app, from Google Sheets to your newly configured rest API data source. This template app has all of the firestore data structures and REFS between some of them.
 
 - Another route you can take at this point is to use the three provided CSV files in the ./appsheet directory. These are meant to be uploaded *through your appsheet app, and from there will be loaded into firebase*.
 
 ### Background
 
-- We use Kaniko build images, check it out [here](https://github.com/GoogleContainerTools/kaniko#kaniko---build-images-in-kubernetes)
+- We use Kaniko build images, check it out [here](https://github.com/GoogleContainerTools/kaniko#kaniko---build-images-in-kubernetes).
 
 - In firebase, we created a simple data model of people, places, things, and events. There is also a special settings table.
 
