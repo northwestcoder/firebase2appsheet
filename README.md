@@ -12,10 +12,10 @@
 ### Run it standalone
 
 - If for whatever reason, you want to run this flask server on your local machine, here are the quick notes:
-	- it's python 3.
-	- we make no assumptions about python virtual envs or module support.
-	- it's pretty straightforward and should work if you are familar with python.
-	- you will need to paste in your key.json file from Google IAM into "misc/key.json" of this project.
+	- It's python 3.
+	- We make no assumptions about python virtual envs or module support.
+	- It's pretty straightforward and should work if you are familar with python.
+	- You will need to paste in your key.json file from Google IAM into "misc/key.json" of this project.
 
 - The default for this example is to run on localhost:8080 and misc/oas.yml refers to this URL. In a later step below, after we deploy to cloud run, we will run a curl command to "init" the instance as well as change the OAS server url to match our new cloud run hostname.
 
@@ -25,7 +25,9 @@
 
 - Sign up for [Google Firestore](https://firebase.google.com/) and create a new firestore project. The name is selectable - we chose "appsheet-firestore" for our example.
 
-- Create a Google Cloud service account and JSON key. From the Firebase console, click on project settings >> Service Accounts >> Manage Service Account permissions. This should redirect you to the Google IAM admin page. From here you will need to create a new service account and then generate a JSON key. We have deliberately avoided providing screenshots for this step because they keep changing how the UX looks :) the bottom line is you need a valid key.json file for use with this project.
+- Create a Google Cloud service account and JSON key. From the Firebase console, click on project settings >> Service Accounts >> Manage Service Account permissions. This should redirect you to the Google IAM admin page. From here you will need to create a new service account and then generate a JSON key. We have deliberately avoided providing screenshots for this step because they keep changing how the UX looks :) 
+
+	- The bottom line is you need a valid key.json file for use with this project.
 
 - Create or use your desired Google Cloud Project and open up the cloud shell.
 
@@ -39,7 +41,7 @@
 
 `echo -n "mylongapikey123890sdflkjw45" > misc/apikey`
 
-- *Important: Paste your key.json contents into the empty misc/key.json file provided*. The next step will fail otherwise. We used the Eclipse Theia cloud shell editor for this step. Same comment as previous step regarding fragility.
+- *Important: Paste your Firestore key.json contents into the empty ./misc/key.json file provided*. The next step will fail otherwise. We used the Eclipse Theia cloud shell editor for this step. Same comment as previous step regarding fragility.
 
 - Run cloud build:
 
@@ -49,16 +51,18 @@
 
 - Once build is complete, your endpoint is *almost ready* for use by Appsheet (or even postman at this point). Take note of the end point at the very end of the build steps, e.g. it will look something like *https://firebase2appsheet-abcdefe123-uc.a.run.app*. This is our YOURNEW_CLOUDRUN_URL url that we will use below. Also take note of the API key value you created above. 
 
-- At the cloud shell prompt, change YOURNEW_CLOUDRUN_URL to your new url and then run. This will a) initialize firestore with some default data, and b) modify the oas.yml file, updating the URL reference on line 7 of that file. Notice that you need to substitute your new cloud run URL *twice* in the following command.
+- At the cloud shell prompt, change YOURNEW_CLOUDRUN_URL to your new url and then run. This will
+	- Initialize firestore with some default data, and
+	- Modify the oas.yml file, updating the URL reference on line 7 of that file.
+	- Notice that you need to substitute your new cloud run URL *twice* in the following command.
 
 `curl -X POST --header "x-apikey: APIKEYFROMABOVESTEP" "YOUNEW_CLOUDRUN_URL/init?oas=YOURNEW_CLOUDRUN_URL"`
 
 So, for example, your curl command might look like:
 
-*curl -X POST --header "x-apikey: mylongapikey123890sdflkjw45" "https://firebase2appsheet-hb3soq
-3q-uc.a.run.app/init?oas=https://firebase2appsheet-hb3soq3q-uc.a.run.app"*
+*curl -X POST --header "x-apikey: mylongapikey123890sdflkjw45" "https://firebase2appsheet-hb3soq3q-uc.a.run.app/init?oas=https://firebase2appsheet-hb3soq3q-uc.a.run.app"*
 
-- If you are an OpenAPI expert, you might now notice that storing our oas.yml inside the server container which is running the endpoints is a brittle way to manage openapi specs. But from a demo perspective or single-deployment perspective, we're ok :) What we are doing is performing a post to our new cloud run instance - which is now dockerized and has a new shiny cloud run url - and using a special endpoint "init" we are telling it to update its own built-in oas.yml file. This is a strong anti-pattern in a production env but fine for demo purposes.
+- If you are an OpenAPI expert, you might now notice that storing our oas.yml inside the server container which is running the endpoints is a brittle way to manage openapi specs. But from a demo perspective or single-deployment perspective, we're ok :) What we are doing is performing a post to our new cloud run instance - which is now dockerized and has a new shiny cloud run url - and using a special endpoint "init" we are then telling it to update its own built-in oas.yml file. This is a strong anti-pattern in a production env but fine for demo purposes.
 
 ### High Level Steps - Google Appsheet
 
