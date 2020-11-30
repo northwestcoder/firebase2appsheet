@@ -74,7 +74,7 @@ So, for example, your curl command might look like:
 
 - Go to www.appsheet.com and create a new Rest API connection ("Apigee") using this endpoint: `https://YOURNEW_CLOUDRUN_URL/oaspec` and using the apikey you configured above - for more information on the rest API connector in Appsheet go [here](https://help.appsheet.com/en/articles/4438873-apigee-data-source).
 
-- We have also provided a [template app](https://www.appsheet.com/samples/Companion-app-for-a-github-project-See-About--More-Information?appGuidString=4615279d-6ace-4adb-8eda-241bdf692bdc) which is currently using Google Sheets. The premise here is that if you were successful in following all of the instructions above, you can swap out - one by one - each table reference in this template app, from Google Sheets to your newly configured rest API data source. This template app has all of the firestore data structures and REFS between some of them.
+- We have also provided a [template Appsheet app](https://www.appsheet.com/samples/Companion-app-for-a-github-project-See-About--More-Information?appGuidString=6120ecb5-5f24-4894-940c-a8d8e1b612b7) which is currently using Google Sheets. The premise here is that if you were successful in following all of the instructions above, you can swap out - one by one - each table reference in this template app, from Google Sheets to your newly configured rest API data source. This template app has all of the firestore data structures and REFS between some of them.
 
 - Another route you can take at this point is to use the three provided CSV files in the ./appsheet directory. These are meant to be uploaded *through your appsheet app, and from there will be loaded into firebase*.
 
