@@ -90,7 +90,7 @@ So, for example, your curl command might look like:
 
 - In firebase, we created a simple data model of people, places, things, and events. There is also a special settings table.
 
-- When you fire up this client, it will try to create at least one record for each of these firestore collections:
+- When you run the "/init" endpoint using curl above, it will try to create at least one record for each of these firestore collections:
 
 	- persons
 	- places
