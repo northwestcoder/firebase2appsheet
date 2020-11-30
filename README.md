@@ -117,7 +117,7 @@ So, for example, your curl command might look like:
 	- You'll want to create an empty collection in Firebase for your data.
 	- We might have missed something - please let us know!
 
-- Future TODO: We should be able to code up a kind of flaskian "RouteFactory" which reads the OpenAPI spec at container runtime and generates all of the routes programatically and populates at least one document (row) in Firestore for consumption.
+- Future TODO: We should be able to code up a kind of flaskian "RouteFactory" which reads the OpenAPI spec at container runtime and generates all of the routes programatically and populates at least one document (row) in Firestore for consumption. Now, all you would need to do is edit your oas.yml file and rebuild the container! Neato...
 
 ### How to productionize this Flask server
 
