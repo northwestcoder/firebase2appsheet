@@ -37,9 +37,11 @@
 
 - Sign up for [Google Firestore](https://firebase.google.com/) and create a new firestore project. The name is selectable - we chose "appsheet-firestore" for our example.
 
-- Create a Google Cloud service account and JSON key. From the Firebase console, click on project settings >> Service Accounts >> Manage Service Account permissions. This should redirect you to the Google IAM admin page. From here you will need to create a new service account and then generate a JSON key. We have deliberately avoided providing screenshots for this step because they keep changing how the UX looks :) 
-
-	- The bottom line is you need a valid Firestore (Google IAM) key.json file for use with this project.
+- Create a Google Cloud service account and JSON key that can access Firestore. 
+	- From the Firebase console, click on project settings >> Service Accounts >> Manage Service Account permissions. 
+	- This should redirect you to the Google IAM admin page. From here you will need to create a new service account, add the Firebase Admin role, and then generate a JSON key. 
+	- We have deliberately avoided providing screenshots for this step because they keep changing how the UX looks :) 
+	- The bottom line is you need a valid (Google IAM) key.json file that can access Firestore for use with this project.
 
 - Create or use your desired Google Cloud Project and open up the cloud shell.
 
