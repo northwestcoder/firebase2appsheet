@@ -32,6 +32,7 @@ def heartbeat():
 			randlat = random.randint(33, 47)
 			randlong = random.randint(-116,-79)
 			randomlatlong = str(randlat) + ", " + str(randlong)
+			# ipsumimage.appspot.com is a image generator website
 			randomimageurl = "http://ipsumimage.appspot.com/300?s=60&f=000000&b=CCCCCC&l=" + recordid
 
 			try:

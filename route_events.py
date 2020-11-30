@@ -16,7 +16,7 @@ def createevent():
 	try:
 		id = request.json['id']
 
-		#server side timestamps from firestore, now we don't need this calc in appsheet
+		#server side timestamps from firestore, so now we don't need this calc in appsheet
 		request.json['timestamp'] = firestore.SERVER_TIMESTAMP
 
 		events.document(id).set(request.json)

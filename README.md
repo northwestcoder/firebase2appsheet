@@ -11,10 +11,11 @@
 
 ### Run it standalone
 
-- If for whatever reason, you want to run this flask server on your local machine, here are the quick notes: a) it's python 3, b) we make no assumptions about virtual envs or module support, c) it's pretty straightforward and should work if you are familar with python.
+- If for whatever reason, you want to run this flask server on your local machine, here are the quick notes: a) it's python 3, b) we make no assumptions about virtual envs or module support, c) it's pretty straightforward and should work if you are familar with python. d) you will need to place your key.json file from Google IAM in the "misc" directory of this project.
 
-- **Otherwise**, the rest of these instructions are canned and tutorialized and should work as-is.
+- The default for this exampel is to run on localhost:8080 and the oas.yml refers to this URL. In a later step below, after we deploy to cloud run, we will run a curl command to "init" the instance as well as change the OAS server url to match our new cloud run hostname.
 
+- The rest of these instructions are canned and tutorialized and should work as-is. Please let us know if not.
 
 ### High Level Steps - Google Firebase and Cloud Run
 
@@ -30,11 +31,11 @@
 
 `cd firebase2appsheet`
 
-- create an empty file named *apikey* and make up an api key for later use, e.g. long alphanumerics. You will need this in a future step below. Storing api keys in a container like this is fragile and should only be used for testing.
+- create an empty file named *apikey* in our misc directory and make up a new api key for later use, e.g. some long alphanumerics of your choosing. You will need this in a future step below. Storing api keys in a container like this is fragile and should only be used for testing.
 
-`echo -n "mylongapikey-123890sdflkjw45" > apikey`
+`echo -n "mylongapikey-123890sdflkjw45" > misc/apikey`
 
-- Paste your key.json contents into the empty key.json file provided (we used the Eclipse Theia cloud shell editor for this). Same comment as previous step regarding fragility.
+- Paste your key.json contents into the empty misc/key.json file provided (we used the Eclipse Theia cloud shell editor for this). Same comment as previous step regarding fragility.
 
 - Run cloud build:
 
@@ -42,15 +43,13 @@
 
 - Cloud run will nicely wrap this python flask server running on http/8080 inside of a SSL instance running on https/443.
 
-- Once build is complete, your endpoint is *almost ready* for use by Appsheet (or even postman at this point). Take note of the end point at the very end of the build steps, e.g.
+- Once build is complete, your endpoint is *almost ready* for use by Appsheet (or even postman at this point). Take note of the end point at the very end of the build steps, e.g. something like *https://firebase2appsheet-abcdefe123-uc.a.run.app*. Also take note of the API key value you created above. 
 
-`https://firebase2appsheet-{{randomid}}-uc.a.run.app/`
+- At the cloud shell prompt, run the following curl command. This will a) initialize firestore with some default data, and b) modify the oas.yml file, updating the URL reference on line 7 of that file.
 
-- Now, we need to edit our oas.yml file and change the "URL" parameter at the very top to our new cloud run URL. (we again used the Theia cloud editor for this). Then run the build a second time:
+`curl -X POST --header "x-apikey: thisisanAPIkey" "https://YOUR_NEW_CLOUDRUN_URL/init?oas=YOUR_NEW_CLOUDRUN_URL"`
 
-`gcloud builds submit --config cloudbuild.yaml .`
-
-- The endpoint/URL for our app will not change this second time around. We'll use it in the next step.
+- If you are an OpenAPI expert, you are now noticing that this is a brittle way to manage openapi specs. But from a demo perspective or single-deployment perspective, we're ok for now. What we are doing is performing a post to our new cloud run instance - which is now dockerized and has a new shiny cloud run url - and using a special endpoint "init", we are telling it to update its own built-in oas.yml file. This is a strong anti-pattern in a production env but fine for demo purposes.
 
 
 ### High Level Steps - Google Appsheet

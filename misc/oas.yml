@@ -4,7 +4,7 @@ info:
   title: Appsheet Design Pattern
   description: Shows various collections in a RESTful design pattern. Used in Appsheet App.
 servers:
-  - url: 'https://firebase2appsheet-hb3so6eq3q-uc.a.run.app/'
+  - url: 'http://localhost:8080/'
 paths:
   /settings:
     get:
