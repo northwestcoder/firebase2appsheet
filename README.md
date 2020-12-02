@@ -161,7 +161,7 @@
 	- You need to do this for each of persons, events, places, things, contents, and settings.
 	- sorry about that :( 
 
-- *Another Glitch: all of the various "photo" fields get marked as type "URL" when you copied the app.* In the column grid editor for each table, you need to change these "photo" fields to type "image" instead. Do this for people, places, things, and events.
+- *Another Glitch: all of the various "photo" fields might get marked as type "URL" when you copy the app.* In the column grid editor for each table, you need to change these "photo" fields to type "image" instead. Do this for people, places, things, and events.
 
 - Now let's bulk-load some data. In the App itself, you can navigate to "People", and then click the upload icon:
 
@@ -175,7 +175,7 @@
 	- Note that we are not storing any images in Firestore directly. Instead, when you first logged into Appsheet, you chose Google Auth or Microsoft Auth, and we are using those respective storage platforms for any uploaded images.
 	- You can also download the Appsheet mobile app from the Apple or Google store and run this app on your smartphone. 
 
- **Congrats!**. Everything should be working now! You have an end to end solution from Firestore to your no-code mobile app.
+ **Congrats!**. Everything should be working now. You now have an end to end solution from Firestore to your no-code mobile app.
 
 ### Background
 
