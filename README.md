@@ -52,6 +52,14 @@
 
 ![create_firestore4.png](media/create_firestore4.png)
 
+- For Firestore Location, we chose us-central:
+
+![create_firestore5.png](media/create_firestore5.png)
+
+- Once the database is created, click on Project Settings, then Service Accounts. Then click "Generate new private key" and download your JSON file. You will need this later:
+
+![create_firestore6.png](media/create_firestore6.png)
+
 
 - Create a Google Cloud service account and JSON key that can access Firestore. 
 	- From the Firestore console, click on project settings >> Service Accounts >> Manage Service Account permissions. 
