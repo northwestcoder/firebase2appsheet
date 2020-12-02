@@ -13,7 +13,6 @@ from route_places import placesroute
 from route_things import thingsroute
 from route_contents import contentsroute
 from route_settings import settingsroute
-from route_init import initroute
 
 app = Flask(__name__)
 app.register_blueprint(eventsroute)
@@ -22,7 +21,9 @@ app.register_blueprint(placesroute)
 app.register_blueprint(thingsroute)
 app.register_blueprint(contentsroute)
 app.register_blueprint(settingsroute)
-app.register_blueprint(initroute)
+
+import initialize
+
 
 @app.route('/oaspec', methods=['GET'])
 @require_apikey

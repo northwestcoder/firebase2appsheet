@@ -34,7 +34,7 @@
 
 - The rest of these instructions are canned and tutorialized and should work as-is. Please let us know if not.
 
-### High Level Steps - Google Firestore and Cloud Run
+### High Level Steps - Google Firestore
 
 - Sign up for [Google Firebase](https://console.firebase.google.com/) and create a new project. The project name is up to you - we chose "appsheet-firestore" for our example:
 
@@ -56,9 +56,26 @@
 
 ![create_firestore5.png](media/create_firestore5.png)
 
-- Once the database is created, click on Project Settings, then Service Accounts. Then click "Generate new private key" and download your JSON file. You will need this later:
+- Once the database is created, click on Project Settings, then Service Accounts. Then click "Generate new private key" and download your JSON file. You will need this json file later:
 
 ![create_firestore6.png](media/create_firestore6.png)
+
+### High Level Steps - Google Cloud Run
+
+- Open a new tab and go to [https://console.cloud.google.com/](https://console.cloud.google.com/). In the steps above, Firestore created a Google Cloud Project for you. Make sure that is selected:
+
+![create_firestore6.png](media/cloud_run.png)
+
+- Open up the cloud shell. This may take a moment:
+
+![create_firestore6.png](media/cloud_run2.png)
+
+- Download this very github project to your Google cloud shell, and then navigate into this new directory:
+
+`git clone https://github.com/northwestcoder/firebase2appsheet`
+
+`cd firebase2appsheet`
+
 
 
 - Create a Google Cloud service account and JSON key that can access Firestore. 

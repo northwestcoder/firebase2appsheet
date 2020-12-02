@@ -5,6 +5,9 @@ from firebase_admin import credentials, firestore, initialize_app
 
 # 1. our initializer 'db' which is called by the rest of the app.
 
+# I'm not sure if firestore client should be a single global instance var, or called each time as needed.
+# pretty sure it's the latter..
+
 cred = credentials.Certificate('misc/key.json')
 default_app = initialize_app(cred)
 db = firestore.client()
