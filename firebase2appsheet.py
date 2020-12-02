@@ -23,7 +23,8 @@ app.register_blueprint(thingsroute)
 app.register_blueprint(contentsroute)
 app.register_blueprint(settingsroute)
 
-import initialize
+import initialize as init
+
 
 def getoas():
 	try:
@@ -49,6 +50,10 @@ if __name__ == '__main__':
 	# otherwise, we are starting this on a seperate process
 	heartbeat_process = Process(target=heartbeat)
 	heartbeat_process.start()
+
+	# comment out the next line if you don't want this demo creating a single
+	# record per firestore collection
+	runfirsttime = init.initialize()
 
 	log.info(f"Some log here") 
 	app.run(threaded=True, host='0.0.0.0', port=8080)

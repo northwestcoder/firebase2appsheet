@@ -68,4 +68,4 @@ def initialize():
 		print("we have a contents collection already")
 
 
-runfirsttime = initialize()
+
