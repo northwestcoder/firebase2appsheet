@@ -196,7 +196,7 @@
 
 - Appsheet - like a lot of clients - expects a flat table-esque structure. None of these Firestore examples have any nested JSON, and nor should they.
 
-- There's also a secret "heartbeat" setting which defaults to OFF. If set to ON, after 0-5 minutes, the cloud run instance will begin creating Firestore data once every five seconds until it sees that heartbeat is set to OFF. If OFF, the heartbeat checks Firestore every five minutes to see if someone has turned on the setting. Enabling this is left as an exercise for the reader. :)
+- There's also a secret "heartbeat" setting which defaults to OFF. If set to ON, after 0-5 minutes, the cloud run instance will begin creating Firestore data once every five seconds, 30 times, and then will set heartbeat back to OFF. When OFF, the heartbeat checks Firestore every five minutes to see if someone has turned on the setting. Experimenting with this is left as an exercise for the reader. :)
 
 ### How to add your own tables
 

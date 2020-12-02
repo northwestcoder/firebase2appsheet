@@ -25,7 +25,7 @@ def heartbeat():
 	while True:
 		if (status == "ON"):	
 			print("status is ON, we are in heartbeat mode")
-			i = 0
+			i = 1
 
 			# only run this 30 times, or put in record terms,
 			# create 30 records over a 2.5 minute period of time
