@@ -70,7 +70,7 @@
 
 ![cloud_run1.png](media/cloud_run1.png)
 
-- Enabling this API will take a moment. Once complete, open up the cloud shell. This may take a moment:
+- Enabling this API will take a moment. Once complete, now search for "Cloud Run" to navigate to this part of the console. Then, open up the cloud shell. This may take a moment:
 
 ![cloud_run2.png](media/cloud_run2.png)
 
