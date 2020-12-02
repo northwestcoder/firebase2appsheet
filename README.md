@@ -146,20 +146,36 @@
 
 ![appsheet4.png](media/appsheet4.png)
 
-- And then select your new datasource, and then the "persons" table:
+- And then select your new Rest API datasource, and then the "persons" table:
 
 ![appsheet5.png](media/appsheet5.png)
 
-- Repeat this for every data source in this app, *except for* the "help" and "globals" tables. These datasources will remain as google sheets.
+- Repeat this for every data source in this app (people, places, things, events, settings, contents), *except for* the "help" and "globals" tables. These datasources will remain as google sheets.
 
+- Once complete, you should see one person, one place, one thing, and one event. 
 
-- Another route you can take at this point is to use the three provided CSV files in the ./appsheet directory. These are meant to be uploaded *through your appsheet app, and from there will be loaded into firebase*.
+- *There's a glitch or bug in Appsheet as of this writing*: for each of our new API-driven tables, you need to:
+	- "Regenerate column structure"
+	- delete the newly created virtual column "ComputedKey"
+	- re-enable the "id" field as the key field.
+	- You need to do this for each of persons, events, places, things, contents, and settings.
+	- sorry about that :( 
 
-- Note that we are not storing any images in Firestore directly. Instead, when you first logged into Appsheet, you chose Google Auth or Microsoft Auth, and we are using those respective storage platforms for any uploaded images.
+- *Another Glitch: all of the various "photo" fields get marked as type "URL" when you copied the app.* In the column grid editor for each table, you need to change these "photo" fields to type "image" instead. Do this for people, places, things, and events.
 
-- You can also download the Appsheet app from the Apple or Google store and run this app on your smartphone. 
+- Now let's bulk-load some data. In the App itself, you can navigate to "People", and then click the upload icon:
 
-- If you have everything working, you can now go back into Firestore admin console, open up the project you created, select "Firestore" and then watch the screen while you use the mobile app. Any changes you make should flash/highlight in the Firestore console. **Congrats!**
+![appsheet6.png](media/appsheet6.png)
+
+- We have provided three CSV files in ./misc/appsheet* for people, places, and things. Repeat the above step for all three.
+
+- Be patient, the app will update once the upload is complete. You can open your Firestore console and watch the data come into Firestore in realtime if you want!
+
+- More Appsheet notes
+	- Note that we are not storing any images in Firestore directly. Instead, when you first logged into Appsheet, you chose Google Auth or Microsoft Auth, and we are using those respective storage platforms for any uploaded images.
+	- You can also download the Appsheet mobile app from the Apple or Google store and run this app on your smartphone. 
+
+ **Congrats!**. Everything should be working now! You have an end to end solution from Firestore to your no-code mobile app.
 
 ### Background
 
@@ -193,8 +209,6 @@
 	- You'll need to modify firebase2appsheet.py to reference your new route_*.py file.
 	- You'll want to create an empty collection in Firestore for your data.
 	- We might have missed something - please let us know!
-
-- Future TODO: We should be able to code up a kind of flaskian "RouteFactory" which reads the OpenAPI spec at container runtime and generates all of the routes programatically and populates at least one document (row) in Firestore for consumption. Now, all you would need to do is edit your oas.yml file and rebuild the container! Neato...
 
 ### How to productionize this Flask server
 
