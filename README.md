@@ -1,6 +1,6 @@
 # firebase2appsheet
 
-#### Note: This is not an official Google Product.
+#### Note: This is not an official Google Product. This is a demonstration for learning purposes only; it is not meant for a production deployment.
 
 ### Overview
 
@@ -16,8 +16,9 @@
 
 ### Requirements
 
-- Access to Google Cloud and a Google cloud project with billing enabled
-- Access to www.appsheet.com - registration is free
+- Access to Google Cloud and a Google cloud project with billing enabled.
+- Access to www.appsheet.com - registration is free.
+- A general understanding of Google cloud projects as well as [cloud shell](https://cloud.google.com/shell).
 
 - **If you have never done this particular pipeline before, we recommend [this tutorial](https://cloud.google.com/community/tutorials/building-flask-api-with-cloud-firestore-and-deploying-to-cloud-run) first.**
 
@@ -33,13 +34,17 @@
 
 - The rest of these instructions are canned and tutorialized and should work as-is. Please let us know if not.
 
-### High Level Steps - Google Firebase and Cloud Run
+### High Level Steps - Google Firestore and Cloud Run
 
-- Sign up for [Google Firestore](https://firebase.google.com/) and create a new firestore project. The name is selectable - we chose "appsheet-firestore" for our example.
+- Sign up for [Google Firebase](https://console.firebase.google.com/) and create a new project. The project name is up to you - we chose "appsheet-firestore" for our example. 
+	- Note: Once you log into firebase and create a new project, click on "Firestore" on the left hand side. 
+	- Second note: Google uses the words Firebase, Firestore, and "realtime database" quite interchangebly. The concept you should focus on here is "Firestore".
+
+![create_firestore.png](media/create_firestore.png)
 
 - Create a Google Cloud service account and JSON key that can access Firestore. 
-	- From the Firebase console, click on project settings >> Service Accounts >> Manage Service Account permissions. 
-	- This should redirect you to the Google IAM admin page. From here you will need to create a new service account, add the Firebase Admin role, and then generate a JSON key. 
+	- From the Firestore console, click on project settings >> Service Accounts >> Manage Service Account permissions. 
+	- This should redirect you to the Google IAM admin page. From here you will need to create a new service account, add the Firestore Admin role, and then generate a JSON key. 
 	- We have deliberately avoided providing screenshots for this step because they keep changing how the UX looks :) 
 	- The bottom line is you need a valid (Google IAM) key.json file that can access Firestore for use with this project.
 
@@ -55,7 +60,7 @@
 
 `echo -n "mylongapikey123890sdflkjw45" > misc/apikey`
 
-- *Important: Paste your Firestore key.json contents into the empty ./misc/key.json file provided*. The next step will fail otherwise. We used the Eclipse Theia cloud shell editor for this step. Same comment as previous step regarding fragility.
+- Next, paste the entire contents of your Firestore key.json contents from the prior step above into an empty ./misc/key.json file that we have provided. Otherwise the next step will fail. We used the Eclipse Theia cloud shell editor for this step - in the shell look for the "Editor" button. Same comment as previous step regarding fragility, etc.
 
 - Run cloud build:
 
@@ -128,7 +133,7 @@ So, for example, your curl command might look like:
 	- You'll need to edit oas.yml to reference your new table.
 	- You'll want to make a copy of one of the route_*.py files, study it, and reference your new table accordingly.
 	- You'll need to modify firebase2appsheet.py to reference your new route_*.py file.
-	- You'll want to create an empty collection in Firebase for your data.
+	- You'll want to create an empty collection in Firestore for your data.
 	- We might have missed something - please let us know!
 
 - Future TODO: We should be able to code up a kind of flaskian "RouteFactory" which reads the OpenAPI spec at container runtime and generates all of the routes programatically and populates at least one document (row) in Firestore for consumption. Now, all you would need to do is edit your oas.yml file and rebuild the container! Neato...
