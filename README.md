@@ -91,7 +91,7 @@
 
 ![cloud_run4.png](media/cloud_run4.png)
 
-- **Save your changes!** Now go back to cloud shell mode - you will now probably have noted that there is a toggle button between "Open Editor" and "Open Terminal".
+- **Save your changes!** Now go back to cloud shell mode (you will now probably have noted that there is a toggle button between "Open Editor" and "Open Terminal").
 
 - We will need to run cloud build **twice**
 	- The first time is to creat the cloud build which gives us a proper DNS and hostname
@@ -109,9 +109,9 @@
 ![cloud_run5.png](media/cloud_run5.png)
 
 
-- copy the new app URL that is displayed at the end of the build. You even try to open a browser to <THENEWURL>/events, and you should get "Unauthorized" - this is because you didn't provide an API key and indicates success.
+- Copy the new app URL that is displayed at the end of the build. You can even try to open a browser to <THENEWURL>/events, and you should get "Unauthorized" - this is because you didn't provide an API key and indicates success.
 
-- Now go back into EDITOR mode, find the file `./misc/oas.yml`, and change the URL entry to the new App URL from above. Include the trailing slash. Save your changes when done!: 
+- Now go back into EDITOR mode, find the file `./misc/oas.yml`, and change the URL entry to the new App URL from above. Include the trailing slash. Save your changes when done: 
 
 ![cloud_run6.png](media/cloud_run6.png)
 
@@ -135,7 +135,8 @@
 - Don't forget the trailing "oaspec". You need to click "validate" and then "authorize access"
 
 - Now copy the appsheet template that we have provided: [template Appsheet app](https://www.appsheet.com/samples/Companion-app-for-a-github-project-See-About--More-Information?appGuidString=6120ecb5-5f24-4894-940c-a8d8e1b612b7) which is currently using Google Sheets.
-![appsheet2.png](media/appsheet.png)
+
+![appsheet2.png](media/appsheet2.png)
 
 - Click "copy and customize". On the next screen give it a name, check the box for "copy data" and wait a few minutes while it copies into your Appsheet account:
 
