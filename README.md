@@ -12,7 +12,7 @@
 
 - [Google Cloud Run](https://cloud.google.com/run) creates production-grade containerized servers from your configured source code.
 
-*This demo/solution combines all four of these elements.*
+*This demo/solution combines all four of these elements. At the end of this demonstration you will have an Appsheet app which is connected to Firestore. This app will have some tables of data such as people, places, things and events.*
 
 ### Requirements
 
@@ -66,11 +66,15 @@
 
 ![cloud_run.png](media/cloud_run.png)
 
-- We need to enabled the Cloud Run API. You can search for this at the top of your project:
+- We need to enable the Cloud Run API. You can search for this at the top of your project:
 
 ![cloud_run1.png](media/cloud_run1.png)
 
-- Enabling this API will take a moment. Once complete, now search for "Cloud Run" to navigate to this part of the console. Then, open up the cloud shell. This may take a moment:
+- Enabling this API will take a moment. We also need to add two roles to the Cloud Build Account. Navigate to IAM, find the account that has the words "cloudbuild" in it, click the pencil icon, and add these two roles:
+
+![cloud_run1.png](media/cloud_iam.png)
+
+- Once the above is complete, now search for "Cloud Run" to navigate to this part of the console. Then, open up the cloud shell. This may take a moment:
 
 ![cloud_run2.png](media/cloud_run2.png)
 
@@ -102,7 +106,8 @@
 
 - Don't forget the trailing "." above. The build will take a few minutes. Cloud run will nicely wrap this python flask server running on http/8080 into a new containerized instance running on https/443. At the end you should see "success" as well as your new hostname:
 
-![cloud_run4.png](media/cloud_run4.png)
+![cloud_run5.png](media/cloud_run5.png)
+
 
 
 - Once build is complete, your endpoint is *almost ready* for use by Appsheet (or even postman at this point). Take note of the end point at the very end of the build steps, e.g. it will look something like *https://firebase2appsheet-abcdefe123-uc.a.run.app*. This is our YOURNEW_CLOUDRUN_URL url that we will use below. Also take note of the API key value you created above. 
