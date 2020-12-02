@@ -2,6 +2,7 @@ import string
 import random
 import time
 from datetime import datetime
+import logging as log
 
 from firebase_admin import firestore
 import client
@@ -50,11 +51,16 @@ def heartbeat():
 
 					heartbeatstatus = client.db.collection(u'settings').document(u'heartbeat')
 					status = heartbeatstatus.get().to_dict()["value"]
+
+					print(str(i))
+
 					time.sleep(5)
 				except Exception as e:
 					time.sleep(5)
 					return f"An Error Occurred: {e}"
 				i += 1
+			turnoff	= client.db.collection('settings').document(u'heartbeat').set({'id': 'heartbeat', 'value': 'OFF'})
+
 					
 		else:
 			print("status is OFF, heartbeat mode paused")	
