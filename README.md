@@ -100,42 +100,48 @@
 
 - Run cloud build the first time
 	- You will also be prompted to Authorize Cloud Shell.
-	- And, if you have never done this before, you will be prompted to enabled API's and try again:
+	- If you get errors, it means one or more of the steps above are incomplete.
 
 `gcloud builds submit --config cloudbuild.yaml .`
 
-- Don't forget the trailing "." above. The build will take a few minutes. Cloud run will nicely wrap this python flask server running on http/8080 into a new containerized instance running on https/443. At the end you should see "success" as well as your new hostname:
+- Don't forget the trailing period (".") in the above command. The build will take a few minutes. Cloud run will nicely wrap this python flask server running on http/8080 into a new containerized instance running on https/443. At the end you should see "success" as well as your new hostname:
 
 ![cloud_run5.png](media/cloud_run5.png)
 
 
+- copy the new app URL that is displayed at the end of the build. You even try to open a browser to <THENEWURL>/events, and you should get "Unauthorized" - this is because you didn't provide an API key and indicates success.
 
-- Once build is complete, your endpoint is *almost ready* for use by Appsheet (or even postman at this point). Take note of the end point at the very end of the build steps, e.g. it will look something like *https://firebase2appsheet-abcdefe123-uc.a.run.app*. This is our YOURNEW_CLOUDRUN_URL url that we will use below. Also take note of the API key value you created above. 
+- Now go back into EDITOR mode, find the file `./misc/oas.yml`, and change the URL entry to the new App URL from above. Include the trailing slash. Save your changes when done!: 
 
-- At the cloud shell prompt, change YOURNEW_CLOUDRUN_URL to your new url and then run. This will
-	- Initialize firestore with some default data, and
-	- Modify the oas.yml file, updating the URL reference on line 7 of that file.
-	- Notice that you need to substitute your new cloud run URL *twice* in the following command.
+![cloud_run6.png](media/cloud_run6.png)
 
-`curl -X POST --header "x-apikey: APIKEYFROMABOVESTEP" "YOUNEW_CLOUDRUN_URL/init?oas=YOURNEW_CLOUDRUN_URL"`
+- Go back to the shell and run the build a second time:
 
-So, for example, your curl command might look like:
+`gcloud builds submit --config cloudbuild.yaml .`
 
-*curl -X POST --header "x-apikey: mylongapikey123890sdflkjw45" "https://firebase2appsheet-hb3soq3q-uc.a.run.app/init?oas=https://firebase2appsheet-hb3soq3q-uc.a.run.app"*
+- If you are an OpenAPI expert, you might now notice that:
+	- Storing our oas.yml inside the server container which is running the endpoints is a brittle way to manage openapi specs. 
+	- But from a demo perspective or single-deployment perspective, we're ok :) 
+	- Also if your goal is simply to expose Firestore to Appsheet, then this procedure is potentially valid for production. 
 
-- If you are an OpenAPI expert, you might now notice that storing our oas.yml inside the server container which is running the endpoints is a brittle way to manage openapi specs. But from a demo perspective or single-deployment perspective, we're ok :) Also if your goal is simply to expose Firestore to Appsheet, then this procedure is also valid for production. 
-
-	- What we are doing above is performing a special one-time POST to our new cloud run instance - which is now dockerized and has a new shiny cloud run url - and using a special endpoint "init" we are then telling it to update its own built-in oas.yml file. This is a strong anti-pattern in a production env but fine for demo purposes.
-
-- OK one more setting to change: In the Cloud Project UX, search for "Cloud Run", and find your newly deployed container. Edit the Cloud Run instance by clicking into it, and then clicking "EDIT & DEPLOY NEW VERSION"
-	- In this screen, you need to set minimum instance to 1, and maximum to 3 (or a deliberately low value as we are just testing).
-	- By setting minimum to 1, we are in theory forcing a long-lived and long-running instance, so that our OAS spec yaml file will remain the same.
+- If everything worked out OK, now we are ready to use Appsheet.com
 
 ### High Level Steps - Google Appsheet
 
-- Go to www.appsheet.com and create a new Rest API connection ("Apigee") using this endpoint: `https://YOURNEW_CLOUDRUN_URL/oaspec` and using the apikey you configured above - for more information on the rest API connector in Appsheet go [here](https://help.appsheet.com/en/articles/4438873-apigee-data-source).
+- Go to www.appsheet.com, sign in and/or register, and create a new Rest API connection ("Apigee") using this endpoint: `https://YOURNEW_APP_URL/oaspec` and using the apikey you configured above - for more information on the rest API connector in Appsheet go [here](https://help.appsheet.com/en/articles/4438873-apigee-data-source).
 
-- We have also provided a [template Appsheet app](https://www.appsheet.com/samples/Companion-app-for-a-github-project-See-About--More-Information?appGuidString=6120ecb5-5f24-4894-940c-a8d8e1b612b7) which is currently using Google Sheets. The premise here is that if you were successful in following all of the instructions above, you can swap out - one by one - each table reference in this template app, from Google Sheets to your newly configured rest API data source. This template app has all of the firestore data structures and REFS between some of them.
+![appsheet.png](media/appsheet.png)
+
+- Don't forget the trailing "oaspec". You need to click "validate" and then "authorize access"
+
+- Now copy the appsheet template that we have provided: [template Appsheet app](https://www.appsheet.com/samples/Companion-app-for-a-github-project-See-About--More-Information?appGuidString=6120ecb5-5f24-4894-940c-a8d8e1b612b7) which is currently using Google Sheets.
+![appsheet2.png](media/appsheet.png)
+
+- Click "copy and customize". On the next screen give it a name, check the box for "copy data" and wait a few minutes while it copies into your Appsheet account:
+
+![appsheet3.png](media/appsheet3.png)
+
+
 
 - Another route you can take at this point is to use the three provided CSV files in the ./appsheet directory. These are meant to be uploaded *through your appsheet app, and from there will be loaded into firebase*.
 
