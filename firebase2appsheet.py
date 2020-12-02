@@ -2,6 +2,7 @@ import os
 from datetime import datetime
 from multiprocessing import Process
 from flask import Flask, request, jsonify
+import logging as log
 
 import client as client
 from heartbeat import heartbeat
@@ -24,18 +25,21 @@ app.register_blueprint(settingsroute)
 
 import initialize
 
-
-@app.route('/oaspec', methods=['GET'])
-@require_apikey
 def getoas():
-
-	# we are opening and reading oas.yml on each request. This is because the 
-	# /init route may update the target server URL value in this file
 	try:
 		oas = open('misc/oas.yml', 'r').read()	
 		return oas
 	except Exception as e:
 		return f"An Error Occurred reading oas spec: {e}"
+
+OASFILE = getoas()
+
+
+@app.route('/oaspec', methods=['GET'])
+@require_apikey
+def getoas():
+
+	return OASFILE
 		
     
 port = int(os.environ.get('PORT', 8080))
@@ -46,6 +50,7 @@ if __name__ == '__main__':
 	heartbeat_process = Process(target=heartbeat)
 	heartbeat_process.start()
 
+	log.info(f"Some log here") 
 	app.run(threaded=True, host='0.0.0.0', port=8080)
 
 
