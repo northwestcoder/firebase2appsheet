@@ -142,6 +142,15 @@
 
 ![appsheet3.png](media/appsheet3.png)
 
+- When your new copy of the template app comes up, you will need to REPLACE each google sheet connection with your new (apigee) Rest API connection. For example, navigate to the "persons" table and choose "browse for more data":
+
+![appsheet4.png](media/appsheet4.png)
+
+- And then select your new datasource, and then the "persons" table:
+
+![appsheet5.png](media/appsheet5.png)
+
+- Repeat this for every data source in this app, *except for* the "help" and "globals" tables. These datasources will remain as google sheets.
 
 
 - Another route you can take at this point is to use the three provided CSV files in the ./appsheet directory. These are meant to be uploaded *through your appsheet app, and from there will be loaded into firebase*.
