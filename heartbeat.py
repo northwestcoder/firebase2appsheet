@@ -24,31 +24,38 @@ def heartbeat():
 	while True:
 		if (status == "ON"):	
 			print("status is ON, we are in heartbeat mode")
+			i = 0
 
-			randomduration = random.randrange(25)
-			recordid = id_generator()
-			# lower left: 33.417827, -116.485679
-			# upper right: 47.148747, -79.837476
-			randlat = random.randint(33, 47)
-			randlong = random.randint(-116,-79)
-			randomlatlong = str(randlat) + ", " + str(randlong)
-			# ipsumimage.appspot.com is a image generator website
-			randomimageurl = "http://ipsumimage.appspot.com/300?s=60&f=000000&b=CCCCCC&l=" + recordid
+			# only run this 30 times, or put in record terms,
+			# create 30 records over a 2.5 minute period of time
+			for i in range(30):
 
-			try:
-				ping = {'id': recordid, 'Name': 'heartbeat event ' + recordid, 'personid': 'abc123', 'placeid': 'abc123', 
-				'thingid': 'abc123','eventtype' : 'heartbeat', 
-				'duration': randomduration, 'address': '3051 NE 86th St, Seattle WA 98115', 
-				'latlong': randomlatlong, 'photo': randomimageurl, 'barcode': '0123456789abcdef', 'notes' : 'some notes go here..',
-				'timestamp':firestore.SERVER_TIMESTAMP}
-				client.db.collection(u'events').document(recordid).set(ping)
+				randomduration = random.randrange(25)
+				recordid = id_generator()
+				# lower left: 33.417827, -116.485679
+				# upper right: 47.148747, -79.837476
+				randlat = random.randint(33, 47)
+				randlong = random.randint(-116,-79)
+				randomlatlong = str(randlat) + ", " + str(randlong)
+				# ipsumimage.appspot.com is a image generator website
+				randomimageurl = "http://ipsumimage.appspot.com/300?s=60&f=000000&b=CCCCCC&l=" + recordid
 
-				heartbeatstatus = client.db.collection(u'settings').document(u'heartbeat')
-				status = heartbeatstatus.get().to_dict()["value"]
-				time.sleep(5)
-			except Exception as e:
-				time.sleep(5)
-				return f"An Error Occurred: {e}"
+				try:
+					ping = {'id': recordid, 'Name': 'heartbeat event ' + recordid, 'personid': 'abc123', 'placeid': 'abc123', 
+					'thingid': 'abc123','eventtype' : 'heartbeat', 
+					'duration': randomduration, 'address': '3051 NE 86th St, Seattle WA 98115', 
+					'latlong': randomlatlong, 'photo': randomimageurl, 'barcode': '0123456789abcdef', 'notes' : 'some notes go here..',
+					'timestamp':firestore.SERVER_TIMESTAMP}
+					client.db.collection(u'events').document(recordid).set(ping)
+
+					heartbeatstatus = client.db.collection(u'settings').document(u'heartbeat')
+					status = heartbeatstatus.get().to_dict()["value"]
+					time.sleep(5)
+				except Exception as e:
+					time.sleep(5)
+					return f"An Error Occurred: {e}"
+				i += 1
+					
 		else:
 			print("status is OFF, heartbeat mode paused")	
 			heartbeatstatus = client.db.collection(u'settings').document(u'heartbeat')
