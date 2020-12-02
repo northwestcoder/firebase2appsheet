@@ -28,7 +28,7 @@
 	- It's python 3.
 	- We make no assumptions about python virtual envs or module support.
 	- It's pretty straightforward and should work if you are familar with python.
-	- You will need to paste in your key.json file from Google IAM into "misc/key.json" of this project.
+	- You will need to paste in your key.json file from Google IAM into "misc/key.json" file of this project.
 
 - The default for this example is to run on localhost:8080 and misc/oas.yml refers to this URL. In a later step below, after we deploy to cloud run, we will run a curl command to "init" the instance as well as change the OAS server url to match our new cloud run hostname.
 
@@ -36,11 +36,22 @@
 
 ### High Level Steps - Google Firestore and Cloud Run
 
-- Sign up for [Google Firebase](https://console.firebase.google.com/) and create a new project. The project name is up to you - we chose "appsheet-firestore" for our example. 
-	- Note: Once you log into firebase and create a new project, click on "Firestore" on the left hand side. 
-	- Second note: Google uses the words Firebase, Firestore, and "realtime database" quite interchangebly. The concept you should focus on here is "Firestore".
+- Sign up for [Google Firebase](https://console.firebase.google.com/) and create a new project. The project name is up to you - we chose "appsheet-firestore" for our example:
 
 ![create_firestore.png](media/create_firestore.png)
+
+- You can disable google analytics for this demonstration:
+
+![create_firestore2.png](media/create_firestore2.png)
+
+- Once your project is up and running, create a new Firestore Database:
+
+![create_firestore3.png](media/create_firestore3.png)
+
+- For security purposes, we recommend Production Mode:
+
+![create_firestore4.png](media/create_firestore4.png)
+
 
 - Create a Google Cloud service account and JSON key that can access Firestore. 
 	- From the Firestore console, click on project settings >> Service Accounts >> Manage Service Account permissions. 
