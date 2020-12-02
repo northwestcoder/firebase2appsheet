@@ -64,45 +64,46 @@
 
 - Open a new tab and go to [https://console.cloud.google.com/](https://console.cloud.google.com/). In the steps above, Firestore created a Google Cloud Project for you. Make sure that is selected:
 
-![create_firestore6.png](media/cloud_run.png)
+![cloud_run.png](media/cloud_run.png)
 
-- Open up the cloud shell. This may take a moment:
+- We need to enabled the Cloud Run API. You can search for this at the top of your project:
 
-![create_firestore6.png](media/cloud_run2.png)
+![cloud_run1.png](media/cloud_run1.png)
 
-- Download this very github project to your Google cloud shell, and then navigate into this new directory:
+- Enabling this API will take a moment. Once complete, open up the cloud shell. This may take a moment:
 
-`git clone https://github.com/northwestcoder/firebase2appsheet`
+![cloud_run2.png](media/cloud_run2.png)
 
-`cd firebase2appsheet`
+- Download this very github project to your Google cloud shell and also execute a few other commands as follows:
+	- `git clone https://github.com/northwestcoder/firebase2appsheet`
+	- `cd firebase2appsheet`
+	- `echo -n "mylongapikey123890sdflkjw45" > misc/apikey`
 
+![cloud_run3.png](media/cloud_run3.png)
 
+- The last command above creates a new api key for later use in Appsheet. You will need to take note of this key (and you can change the value as desired)
 
-- Create a Google Cloud service account and JSON key that can access Firestore. 
-	- From the Firestore console, click on project settings >> Service Accounts >> Manage Service Account permissions. 
-	- This should redirect you to the Google IAM admin page. From here you will need to create a new service account, add the Firestore Admin role, and then generate a JSON key. 
-	- We have deliberately avoided providing screenshots for this step because they keep changing how the UX looks :) 
-	- The bottom line is you need a valid (Google IAM) key.json file that can access Firestore for use with this project.
+- Next, open up the cloud editor, find the file key.json and paste in the entire contents of the JSON file you downloaded during the Firestore configuration.
 
-- Create or use your desired Google Cloud Project and open up the cloud shell.
+![cloud_run4.png](media/cloud_run4.png)
 
-- Download this very github project to your Google cloud shell, e.g. from your cloud shell home directory:
+- **Save your changes!** Now go back to cloud shell mode - you will now probably have noted that there is a toggle button between "Open Editor" and "Open Terminal".
 
-`git clone https://github.com/northwestcoder/firebase2appsheet`
+- We will need to run cloud build **twice**
+	- The first time is to creat the cloud build which gives us a proper DNS and hostname
+	- We will then edit our ./misc/oas.yml file and change the URL to this new DNS
+	- And then we will run cloud build a second time to update the container.
 
-`cd firebase2appsheet`
-
-- Run the following command to create a file named *apikey* in our misc directory and make up a new api key for later use, e.g. some long alphanumerics of your choosing. You will need this in a future step below. Storing api keys in a container like this is fragile and should only be used for testing.
-
-`echo -n "mylongapikey123890sdflkjw45" > misc/apikey`
-
-- Next, paste the entire contents of your Firestore key.json contents from the prior step above into an empty ./misc/key.json file that we have provided. Otherwise the next step will fail. We used the Eclipse Theia cloud shell editor for this step - in the shell look for the "Editor" button. Same comment as previous step regarding fragility, etc.
-
-- Run cloud build:
+- Run cloud build the first time
+	- You will also be prompted to Authorize Cloud Shell.
+	- And, if you have never done this before, you will be prompted to enabled API's and try again:
 
 `gcloud builds submit --config cloudbuild.yaml .`
 
-- This will take a few minutes. Cloud run will nicely wrap this python flask server running on http/8080 into a new containerized instance running on https/443.
+- Don't forget the trailing "." above. The build will take a few minutes. Cloud run will nicely wrap this python flask server running on http/8080 into a new containerized instance running on https/443. At the end you should see "success" as well as your new hostname:
+
+![cloud_run4.png](media/cloud_run4.png)
+
 
 - Once build is complete, your endpoint is *almost ready* for use by Appsheet (or even postman at this point). Take note of the end point at the very end of the build steps, e.g. it will look something like *https://firebase2appsheet-abcdefe123-uc.a.run.app*. This is our YOURNEW_CLOUDRUN_URL url that we will use below. Also take note of the API key value you created above. 
 
