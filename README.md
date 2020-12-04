@@ -196,13 +196,18 @@
 
 - Appsheet - like a lot of clients - expects a flat table-esque structure. None of these Firestore examples have any nested JSON, and nor should they.
 
+- Further, any time we are getting a collection of results in flask route code, we have to add the "tablename" to the JSON response like so ("events" is our table name):
+	- `		jsonresult = jsonify({"events" : all_events}), 200
+			return jsonresult`
+
+
 - There's also a secret "heartbeat" setting which defaults to OFF. If set to ON, after 0-5 minutes, the cloud run instance will begin creating Firestore data once every five seconds, 30 times, and then will set heartbeat back to OFF. When OFF, the heartbeat checks Firestore every five minutes to see if someone has turned on the setting. Experimenting with this is left as an exercise for the reader. :)
 
 ### How to add your own tables
 
 - You're going to need to dig into the code for this - we've tried to make it somewhat modular. 
 
-- High level ideas here:
+- High level ideas
 
 	- You'll need to edit oas.yml to reference your new table.
 	- You'll want to make a copy of one of the route_*.py files, study it, and reference your new table accordingly.
@@ -210,7 +215,7 @@
 	- You'll want to create an empty collection in Firestore for your data.
 	- We might have missed something - please let us know!
 
-- Template example:
+- Template example
 
 	- We have provided a route_yournewcollection file
 	- This gets referenced in firebase2appsheet.py twice
