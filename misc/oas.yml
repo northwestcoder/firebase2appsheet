@@ -8,7 +8,7 @@ servers:
 paths:
 
 
-  /yournewcollection:
+  /yournewcollections:
     get:
       tags:
         - yournewcollection
@@ -53,7 +53,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'   
-  '/yournewcollection/{id}':
+  '/yournewcollections/{id}':
     get:
       tags:
         - yournewcollection

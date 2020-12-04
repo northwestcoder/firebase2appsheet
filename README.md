@@ -210,6 +210,14 @@
 	- You'll want to create an empty collection in Firestore for your data.
 	- We might have missed something - please let us know!
 
+- Template example:
+
+	- We have provided a route_yournewcollection file
+	- This gets referenced in firebase2appsheet.py twice
+		- an import statement
+		- a blueprint statement
+	- You would also need to edit your oas.yml, we recommend using a swagger editor.
+
 ### How to productionize this Flask server
 
 - We recommend removing all of the heartbeat code - that's just for demo purposes.
