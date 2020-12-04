@@ -51,8 +51,8 @@ def initialize():
 		new = things.document(u'abc123')
 		new.set({'id': 'abc123', 'Name': 'placeholder thing abc123',  'barcode' : '0123456789abcdef', 
                 'startdate': '4/4/2020 12:00:00 AM','enddate' : '12/4/2021 12:00:00 AM', 
-                'photo' : 'https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Cloud_Covered.png', 'price' : 27.99, 
-                'supplier' : 'Acme Supplies'})
+                'photo' : 'https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Cloud_Covered.png',
+                'price' : 27.99, 'supplier' : 'Acme Supplies'})
 	else:
 		print("we have a things collection already")
 
@@ -84,7 +84,17 @@ def initialize():
 	if (len(yournewcollections.get())==0):
 		print("generating first yournewcollections entry")
 		new = yournewcollections.document(u'abc123')
-		new.set({'id': 'abc123', 'Name': 'the name of this record', 'timestamp': firestore.SERVER_TIMESTAMP})
+		new.set({
+			'id': 'abc123', 
+			'Name': 'the name of this record', 
+			'timestamp': firestore.SERVER_TIMESTAMP,
+			'lastmodified': firestore.SERVER_TIMESTAMP, 
+			'createdby': 'you@example.com', 
+			'modifiedby': 'you@example.com', 
+			'integervalue': 100,
+			'floatvalue': 123.45, 
+			'datevalue': '04/25/2020'
+			})
 	else:
 		print("we have a yournewcollections collection already")
 

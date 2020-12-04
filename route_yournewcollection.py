@@ -52,6 +52,10 @@ def update_yournewcollections(id):
 
 	try:
 		id = request.json['id']
+
+		#server side timestamps from firestore, so now we don't need this calc in appsheet
+		request.json['lastmodified'] = firestore.SERVER_TIMESTAMP
+
 		yournewcollections.document(id).update(request.json)
 		return jsonify({"success": True}), 200
 	except Exception as e:

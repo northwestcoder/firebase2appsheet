@@ -53,6 +53,31 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'   
+    post:
+      tags:
+        - yournewcollection
+      description: Create yournewcollection 
+      summary: Create a new yournewcollection.
+      operationId: Createyournewcollection
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/yournewcollection'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/yournewcollectionResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'   
   '/yournewcollections/{id}':
     get:
       tags:
