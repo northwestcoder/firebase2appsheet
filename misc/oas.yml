@@ -6,6 +6,96 @@ info:
 servers:
   - url: 'http://localhost:8080/'
 paths:
+
+
+  /yournewcollection:
+    get:
+      tags:
+        - yournewcollection
+      description: Return list of yournewcollection.
+      summary: Returns list of existing yournewcollection.
+      operationId: getyournewcollections
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/yournewcollectionResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    put:
+      tags:
+        - yournewcollection
+      description: Update yournewcollection completely
+      summary: Update an existing yournewcollection.
+      operationId: updateyournewcollection
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/yournewcollection'
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/yournewcollectionResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'   
+  '/yournewcollection/{id}':
+    get:
+      tags:
+        - yournewcollection
+      description: Return yournewcollection details.
+      summary: Return details for an existing yournewcollection.
+      operationId: getyournewcollection
+      parameters:
+        - $ref: '#/components/parameters/yournewcollectionIdPath'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/yournewcollectionResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      tags:
+        - yournewcollection
+      description: Delete yournewcollection.
+      summary: Delete an existing yournewcollection.
+      operationId: deleteyournewcollection
+      parameters:
+        - $ref: '#/components/parameters/yournewcollectionIdPath'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/yournewcollectionResponse'
+        '400':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
   /settings:
     get:
       tags:
@@ -671,6 +761,13 @@ components:
       in: header
       name: x-apikey
   parameters:
+    yournewcollectionIdPath:
+      in: path
+      name: id
+      description: The yournewcollectionIdPath identifier.
+      required: true
+      schema:
+        type: string
     personIdPath:
       in: path
       name: id
@@ -714,6 +811,30 @@ components:
       schema:
         type: string                 
   schemas:
+  
+    yournewcollection:
+      type: object
+      required:
+        - id
+        - Name
+        - value
+      additionalProperties: false
+      properties:
+        id:
+          type: string
+        Name:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+    yournewcollectionResponse:
+      type: object
+      properties:
+        Settings:
+          type: array
+          items:
+            $ref: '#/components/schemas/yournewcollection'     
+            
     Settings:
       type: object
       required:

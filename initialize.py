@@ -10,12 +10,17 @@ def initialize():
 	events = client.db.collection('events')
 	contents = client.db.collection('contents')
 
+	# template that you can copy from
+	yournewcollections = client.db.collection('yournewcollections')	
+
 	if (len(settings.get())==0):
 		print("generating first settings entry")
 		new = settings.document(u'heartbeat')
 		new.set({'id': 'heartbeat', 'value': 'OFF'})
 	else:
 		print("we have a settings collection already")
+
+
 
 	if (len(persons.get())==0):
 		print("generating first persons entry")
@@ -28,6 +33,8 @@ def initialize():
 	else:
 		print("we have a person collection already")
 
+
+
 	if (len(places.get())==0):
 		print("generating first places entry")
 		new = places.document(u'abc123')
@@ -36,6 +43,8 @@ def initialize():
 				'photo' : 'https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Cloud_Covered.png'})
 	else:
 		print("we have a places collection already")
+
+
 
 	if (len(things.get())==0):
 		print("generating first things entry")
@@ -46,6 +55,7 @@ def initialize():
                 'supplier' : 'Acme Supplies'})
 	else:
 		print("we have a things collection already")
+
 
 
 	if (len(events.get())==0):
@@ -60,12 +70,25 @@ def initialize():
 	else:
 		print("we have a events collection already")
 
+
+
 	if (len(contents.get())==0):
 		print("generating first contents entry")
 		new = contents.document(u'abc123')
 		new.set({'id': 'abc123', 'content': 'placeholder content abc123'})
 	else:
 		print("we have a contents collection already")
+
+
+	# template that you can copy from
+	if (len(yournewcollections.get())==0):
+		print("generating first yournewcollections entry")
+		new = yournewcollections.document(u'abc123')
+		new.set({'id': 'abc123', 'Name': 'the name of this record', 'timestamp': firestore.SERVER_TIMESTAMP})
+	else:
+		print("we have a yournewcollections collection already")
+
+
 
 
 

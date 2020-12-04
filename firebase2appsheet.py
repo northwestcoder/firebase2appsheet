@@ -4,7 +4,7 @@ from multiprocessing import Process
 from flask import Flask, request, jsonify
 import logging as log
 
-import client as client
+import client
 from heartbeat import heartbeat
 from apiauth import require_apikey
 
@@ -15,6 +15,9 @@ from route_things import thingsroute
 from route_contents import contentsroute
 from route_settings import settingsroute
 
+# template that you can copy from
+from route_yournewcollection import yournewcollectionsroute
+
 app = Flask(__name__)
 app.register_blueprint(eventsroute)
 app.register_blueprint(personsroute)
@@ -23,6 +26,10 @@ app.register_blueprint(thingsroute)
 app.register_blueprint(contentsroute)
 app.register_blueprint(settingsroute)
 
+# template that you can copy from
+app.register_blueprint(yournewcollectionsroute)
+
+# disable the next line if you don't want to use the built-in demo tables/collections
 import initialize as init
 
 

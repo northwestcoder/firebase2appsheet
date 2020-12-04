@@ -1,8 +1,6 @@
 import os
 from firebase_admin import credentials, firestore, initialize_app
 
-
-
 # 1. our initializer 'db' which is called by the rest of the app.
 
 # I'm not sure if firestore client should be a single global instance var, or called each time as needed.
@@ -11,9 +9,6 @@ from firebase_admin import credentials, firestore, initialize_app
 cred = credentials.Certificate('misc/key.json')
 default_app = initialize_app(cred)
 db = firestore.client()
-
-
-
 
 # 2. remember folks, this is a demo and reference build
 # it's ok for us to read the file system for each request that comes in
@@ -27,4 +22,4 @@ def getapikey():
 	except Exception as e:
 		return f"An Error Occurred reading api key on file system: {e}"
 
-
+instance_apikey = getapikey()
