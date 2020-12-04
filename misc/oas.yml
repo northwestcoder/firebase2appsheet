@@ -811,13 +811,12 @@ components:
       schema:
         type: string                 
   schemas:
-  
     yournewcollection:
       type: object
       required:
         - id
         - Name
-        - value
+        - timestamp
       additionalProperties: false
       properties:
         id:
@@ -827,6 +826,21 @@ components:
         timestamp:
           type: string
           format: date-time
+        lastmodified:
+          type: string
+          format: date-time
+        createdby:
+          type: string
+        modifiedby:
+          type: string
+        integervalue:
+          type: integer
+        floatvalue:
+          type: number
+          format: float
+        datevalue:
+          type: string
+          format: date
     yournewcollectionResponse:
       type: object
       properties:
