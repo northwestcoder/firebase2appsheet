@@ -218,6 +218,16 @@
 		- a blueprint statement
 	- You would also need to edit your oas.yml, we recommend using a swagger editor.
 
+- A note about timestamps
+
+	- If you look in either route_events or route_yournewcollection, you will see that we set record "timestamp" (creation) and "lastmodified" dates.
+	- We do so using *firestore server-side functions* for creation timestamp, but we allow Appsheet to send in "lastmodified".
+	- The field "lastmodified" should be treated as a Datetime and can be marked as editable in Appsheet.
+	- The field "timestamp" should be treated as a string and not editable in Appsheet. You can then create a virtual field which represents its value:
+	
+![timestamps.png](media/timestamps.png)
+
+
 ### How to productionize this Flask server
 
 - We recommend removing all of the heartbeat code - that's just for demo purposes.
