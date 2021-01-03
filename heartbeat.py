@@ -47,8 +47,6 @@ def heartbeat():
 				heartbeatstatus = client.db.collection(u'settings').document(u'heartbeat')
 				status = heartbeatstatus.get().to_dict()["value"]
 
-				print(str(i))
-
 				time.sleep(5)
 			except Exception as e:
 				time.sleep(5)

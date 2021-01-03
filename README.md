@@ -234,6 +234,8 @@ return jsonresult
 	
 ![timestamps.png](media/timestamps.png)
 
+	- The premise here is to not allow the client to write timestamps, and instead have firestore do it. This way, all of our timestamps are universal and synchronized.
+
 
 ### How to productionize this Flask server
 
