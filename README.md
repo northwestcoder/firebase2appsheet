@@ -134,7 +134,7 @@
 
 - Don't forget the trailing "oaspec". You need to click "validate" and then "authorize access"
 
-- Now copy the appsheet template that we have provided: [template Appsheet app](https://www.appsheet.com/samples/Companion-app-for-a-github-project-See-About--More-Information?appGuidString=6120ecb5-5f24-4894-940c-a8d8e1b612b7) which is currently using Google Sheets.
+- Now copy the appsheet template that we have provided: [template Appsheet app](https://www.appsheet.com/samples/Companion-app-for-a-github-project-See-About--More-Information?appGuidString=9729275d-1821-46fb-bc90-031222d77413) which is currently using Google Sheets.
 
 ![appsheet2.png](media/appsheet2.png)
 
